@@ -3,7 +3,9 @@
  *
  * Bootstraps Vuetify and other plugins then mounts the App`
  */
+import Translator from './i18n';
 
+new Translator;
 
 // Components
 import App from './App.vue'

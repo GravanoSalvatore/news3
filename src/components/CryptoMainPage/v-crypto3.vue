@@ -1,5 +1,5 @@
 <template>
-  <br/><br/><br/>
+  
   <div>
     <div class="album py-5 ">
       <div class="container">
@@ -20,7 +20,7 @@
                 <p class="card-text">
                   <a :href="item.url" target="_blank">{{ item.title }}</a>
                 </p>
-                <span class="text-success"> {{ item.source_info.name }}</span>
+                <!-- <span class="text-success"> {{ item.source_info.name }}</span> -->
                 <div class="d-flex justify-content-between align-items-center">
                  
                 </div>
@@ -51,7 +51,7 @@ export default {
           articles: [],      
           currentPage: 1,    
           totalPages: 1,    
-          rows: 4,         
+          rows: 12,         
         };
       },
       computed: {
@@ -67,7 +67,7 @@ export default {
           
           // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
         
-          const pageSize = 100;
+          // const pageSize = 100;
           
           try {
             const response = await fetch(
@@ -115,25 +115,22 @@ export default {
 <style scoped>
 .page-numbers{
  margin-top: 20px;
- color: white;
+ color:black;
 }
  .next-bt,.prev-bt{
               margin: 13px;
-              /* background-color:white; */
-              color: white;
-              box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-              border-radius: 2px;
+             
               padding: 7px;
               font-weight: bold;
               
             }
-            .next-bt:hover,.prev-bt:hover{
+            /* .next-bt:hover,.prev-bt:hover{
               background-image: linear-gradient(to right,#040d1d, #053684);
               color: white;
               
               
           
-            } 
+            }  */
 a{
   text-decoration: none;
   color:white;
@@ -142,11 +139,18 @@ a{
 a:hover{
   text-decoration: underline;
 }
-.card{
+.card-body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90px;
+}
+.card{ 
+  background-image: linear-gradient(to right, #040d1d, #053684);
+           
                 border: none !important;
                 box-shadow: none !important;
             }
-            .album,.card{
-                background-color: #040d1d;
+            .card{
+              background-image: linear-gradient(to right, #040d1d, #053684);
             } 
 </style>

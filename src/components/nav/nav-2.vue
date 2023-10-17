@@ -1,81 +1,23 @@
 
-    
-
-
 <template lang="">
-  <div>
-
+  
+  <header>
+   
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   
-      <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Donate</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img class="img-donate" src="../../assets/bitcoin_94576.png"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
-        <img class="img-donate" src="../../assets/eth-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment_95451.png"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
-        <img class="img-donate" src="../../assets/usdt_cryptocurrencies_icon_188337.png"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
-        <img class="img-donate" src="../../assets/paypal_512_icon-icons.com_75983.png"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
-        
-        
-        
-
-      </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
-    </div>
-  </div>
-
-
-</div>
-
-
-<div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel"> <a class="navbar-brand " href="#"><img style="width:70px" src="../../assets/e-good-news-1024x936.png"></a></h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <p>Good News are your trusted source for up-to-the-minute news covering the world of cryptocurrencies and the dynamic realm of business. Our mission is to provide our readers with the freshest and most reliable information needed to make informed decisions in the fields of investment, finance, and technology.</p>
-      <p>Good News monitor the latest developments in the cryptocurrency world, analyze the market, and provide reviews of leading digital assets. Whether you're an experienced trader or a newcomer to the crypto space, our content will help you stay informed about crucial events.</p>
-      <p>Good News keep tabs on business news and trends that can impact the global economy. Our articles offer analytical insights into significant happenings in the business world, corporate innovations, and global trends.
-</p>
-      <p>Good News adhere to the highest standards of journalism and strive to deliver trustworthy information. Our team of professional journalists and experts ensures that you receive only high-quality content.
-</p>
-      <p>Good News update our website as soon as important information surfaces, ensuring you're always in the know.
-</p>
-      <p>Good News cover a wide range of subjects, from cryptocurrencies and finance to technology and business, catering to the interests of all our readers.</p>
-      <p>Good News provide an analytical perspective on events, along with expert commentary to help you understand their implications.</p>
-      <p>With us, you gain access to a world of news and information that can empower you to make informed decisions. Welcome to our website, where information becomes knowledge, and knowledge is power.</p>
-      </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
-    </div>
-  </div>
-</div>
-
-
-
-<div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  
-  <div class="modal-dialog">
-<div class="modal-content" style="background-color: #040d1d">
+<div class="modal-content">
   <div class="modal-header">
-    <h1 class="modal-title fs-5" id="exampleModalLabel">Contact</h1>
+    <h1 class="modal-title fs-5" id="exampleModalLabel">Donate</h1>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
-  <div class="modal-body " style="color:white">
-    goodnews@gmail.com<br/>
-    167-169 Great Portland Street<br/>
-    London 
+  <div class="modal-body">
+    <img class="img-donate" :src="btc"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
+    <img class="img-donate" :src="eth"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
+    <img class="img-donate" :src="usdt"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
+    <img class="img-donate" :src="payPal"><span>17Mrtxxq2iXfyGKf9QY1oUtFezUQ1DZUS8</span><br/>
+    
+    
     
 
   </div>
@@ -89,133 +31,232 @@
 
 </div>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top " >
-  <div class="container-fluid">
-     <a class="navbar-brand " href="#"><img style="width:70px" src="../../assets/e-good-news-1024x936.png"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <router-link to="/" class="nav-link active" aria-current="page" style="" href="#"><strong>HOME</strong></router-link>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          NEWS
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><router-link to="/News" class="dropdown-item" href="#">GENERAL</router-link></li>
-          <li><router-link to="/Business" class="dropdown-item" href="#">BUSINESS</router-link></li>
-          <li><router-link to="/Tech" class="dropdown-item" href="#">TECHNOLOGY</router-link></li>
-         
-          <li><router-link to="/Science" class="dropdown-item" href="#">SCIENCE</router-link></li>
-          <li><router-link to="/Health" class="dropdown-item" href="#">HEALTH</router-link></li>
-          <li><router-link to="/Sport" class="dropdown-item" href="#">SPORT</router-link></li>
-          <li><router-link to="/Entertainment" class="dropdown-item" href="#">ENTERTAINMENT</router-link></li>
-          
-        </ul>
-      </li>
+
+<div class="modal fade" style="background-color:black" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" >
+<div class="modal-content">
+  <div class="modal-header" >
+    <h1 class="modal-title fs-5" id="exampleModalLabel"> <a class="navbar-brand " href="#"><img style="width:70px" :src="logo"></a></h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body text-white" style="background-color:rgb( 92,187,246)">
+   <p><strong>Global News Hub</strong>   are your trusted source for up-to-the-minute news covering the world of cryptocurrencies and the dynamic realm of business. Our mission is to provide our readers with the freshest and most reliable information needed to make informed decisions in the fields of investment, finance, and technology.</p>
+  <p><strong>Global News Hub</strong> monitor the latest developments in the cryptocurrency world, analyze the market, and provide reviews of leading digital assets. Whether you're an experienced trader or a newcomer to the crypto space, our content will help you stay informed about crucial events.</p>
+  <p><strong>Global News Hub</strong> keep tabs on business news and trends that can impact the global economy. Our articles offer analytical insights into significant happenings in the business world, corporate innovations, and global trends.
+</p>
+  <p><strong>Global News Hub</strong> adhere to the highest standards of journalism and strive to deliver trustworthy information. Our team of professional journalists and experts ensures that you receive only high-quality content.
+</p>
+  <p><strong>Global News Hub</strong> update our website as soon as important information surfaces, ensuring you're always in the know.
+</p>
+  <p><strong>Global News Hub</strong> cover a wide range of subjects, from cryptocurrencies and finance to technology and business, catering to the interests of all our readers.</p>
+  <p><strong>Global News Hub</strong> provide an analytical perspective on events, along with expert commentary to help you understand their implications.</p>
+  <p>With us, you gain access to a world of news and information that can empower you to make informed decisions. Welcome to our website, where information becomes knowledge, and knowledge is power.</p>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div> -->
+</div>
+</div>
+</div>
 
 
-      <li class="nav-item">
-        <router-link to="/Ico" class="nav-link" href="#">ARTICLES</router-link>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">FOREX</a>
-      </li>
-       <li class="nav-item ">
-        <router-link to="/MainCrypto" class="nav-link" href="#">
-          CRYPTO
-        </router-link>
+
+<div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal-dialog">
+<div class="modal-content" style="background-color: #040d1d">
+<div class="modal-header">
+<h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Contact</h1>
+<button type="button" style="background-color:white" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body " style="color:white">
+globalnewshub@gmail.com<br/>
+167-169 Great Portland Street<br/>
+London 
+
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <nav id="main-navbar" class="navbar navbar-expand-md fixed-top navbar-before-scroll shadow-0">
+    
+ <div class="container-fluid">
+   
+   <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+           data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+           aria-label="Toggle navigation">
+     <i class="fas fa-bars"></i>
+   </button>
+
+  
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <img style="width:70px" :src="logo">
+     <span class="pl-3"> <bread/></span>
+    
+      <div class="dropdown">
       
-      </li>
-      <li class="nav-item" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal-2">
-        <a class="nav-link" href="#">ABOUT</a>
-      </li>
+<button
+ class="btn mt-4  "
+ 
+ 
+>
+<router-link to="/" class="text-secondary">Home</router-link>
+</button>
+<!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+ <li><a class="dropdown-item" href="#">Action</a></li>
+ <li><a class="dropdown-item" href="#">Another action</a></li>
+ <li><a class="dropdown-item" href="#">Something else here</a></li>
+</ul> -->
+</div> 
+<div class="dropdown">
+<button
+ class="btn mt-4  dropdown-toggle"
+ type="button"
+ id="dropdownMenuButton"
+ data-mdb-toggle="dropdown"
+ aria-expanded="false"
+ 
+>
+ News
+</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <!-- <li><router-link to="/General" class="dropdown-item" href="#">General</router-link></li> -->
+  <li><router-link to="/Business" class="dropdown-item" href="#">Business</router-link></li>
+ 
+  <li><router-link to="/Tech" class="dropdown-item" href="#">Technology</router-link></li>
+ 
+ <li><router-link to="/Sport" class="dropdown-item" href="#">Sport</router-link></li>
+ 
+ <li><router-link to="/Health" class="dropdown-item" href="#">Health</router-link></li>
+ <li><router-link to="/Science" class="dropdown-item" href="#">Science</router-link></li>
+ <li><router-link to="/Entertainment" class="dropdown-item" href="#">Entertainment</router-link></li>
+ 
+</ul>
+</div> 
+<div class="dropdown">
+<button
+ class="btn mt-4  dropdown-toggle"
+ type="button"
+ id="dropdownMenuButton"
+ data-mdb-toggle="dropdown"
+ aria-expanded="false"
+ 
+>
+ Crypto
+</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <li><router-link to="/Crypto" class="dropdown-item" href="#">Crypto</router-link></li>
+ <li><router-link to="/People" class="dropdown-item" href="#">People of crypto</router-link></li>
+ <li><router-link to="/Nft" class="dropdown-item" href="#">NFT</router-link></li>
+ <li><router-link to="/Defi" class="dropdown-item" href="#">Defi</router-link></li>
+ <li><router-link to="/CryptoPage" class="dropdown-item" href="#">TOP</router-link></li>
+
+
+</ul>
+</div> 
      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          MORE
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><router-link to="/Crypto" class="dropdown-item" >VIDEO</router-link></li>
+       <div class="dropdown">
+<button
+ class="btn mt-4  dropdown-toggle"
+ type="button"
+ id="dropdownMenuButton"
+ data-mdb-toggle="dropdown"
+ aria-expanded="false"
+ 
+>
+ More
+</button>
+<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Articles</a></li>
+
+
+
+
+
+
+          <li type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-2"    >
+        <a class="dropdown-item" href="#">ABOUT</a>
+      </li>
+          
           <li type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal-3"><a class="dropdown-item" href="#">CONTACT</a></li>
           
-          <li><hr class="dropdown-divider"></li>
+         
           <li type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"><a class="dropdown-item" href="#">DONATE</a></li>
         </ul>
-      </li>
 
+</div> 
+
+     </ul>
      
-      <div class="container-fluid">
-    <ul class="navbar-nav">
     
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <i class="flag-united-kingdom flag m-0"></i>
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li>
-            <a class="dropdown-item" href="#"
-              ><i class="flag-united-kingdom flag"></i>English
-              <i class="fa fa-check text-success ms-2"></i
-            ></a>
-          </li>
-          <li><hr class="dropdown-divider" /></li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-       
-      </ul>
-      <form class="d-flex">
-        <input  v-model="searchT" 
+     
+
+     <form class="d-flex" role="search">
+   <input   v-model="searchT" 
        placeholder="Search news" 
        v-on:input="onSearchType"  
        class="form-control me-2"  
-       aria-label="Search">
-       
-      </form>
-    </div>
-  </div>
-</nav>
+       aria-label="Search"  
+       style="height:20px"  
+       type="search" >
+   
+ </form>
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ <ul class="navbar-nav flex-row">
+     
+       <li class="nav-item">
+         <a class="nav-link pe-2" href="#!">
+           <i class="fab fa-youtube"></i>
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link px-2" href="#!">
+           <i class="fab fa-facebook-f"></i>
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link px-2" href="#!">
+           <i class="fab fa-twitter"></i>
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link ps-2" href="#!">
+           <i class="fab fa-instagram"></i>
+         </a>
+       </li>
+     </ul>
+   </div>
+  
 
+ </div>
+
+</nav>
 <div class="wrap">
 <div class="div "> 
-    <button @click="searchClose" class="close"><img style="width:14px" src="../../assets/1486564399-close_81512.png"></button> 
+    <button @click="searchClose" class="close"><img style="width:14px" src="../../assets/1.png"></button> 
   
   <div v-for="item in news"
   
@@ -224,35 +265,46 @@
 <ul>
    
  <a class="title" :href="item.url" 
-         target="_blank "><li>{{item.title}}</li></a>
+         target="_blank "><li class="text-white">{{item.title}}</li></a>
+      
         </ul>   
   
   </div> 
   </div>
 </div>
-  </div>
+</header>
+
 </template>
 <script>
-// 1fb27fc9978d48ecadb4bdc77705325e API tech
-import axios from 'axios';
+import bread from '../../components/BreadCrams/v-bread-crams.vue'
+import axios from 'axios'
 export default {
+  components:{bread},
   data(){
       return{
           news:[],
-          searchT:''
-      }
+          searchT:'',
+          logo:'https://play-lh.googleusercontent.com/SOkLgfrJZHsnx2aHtTdsGleK3CG98VXUMAmJ8qP3P_p43Gx4nzXfBwqU0f8VPVyF9oQ',
+          btc:'https://media.istockphoto.com/id/1139020309/vector/bitcoin-internet-money-icon-vector.jpg?s=612x612&w=0&k=20&c=vcRUEDzhndMOctdM7PN1qmipo5rY_aOByWFW0IkW8bs=',
+          eth:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ethereum_logo_translucent.svg/1449px-Ethereum_logo_translucent.svg.png',
+          usdt:'https://png.pngtree.com/png-clipart/20221113/ourmid/pngtree-tether-or-usdt-green-coin-3d-rendering-front-view-cryptocurrency-illustration-png-image_6443096.png',
+          payPal:'https://static.vecteezy.com/system/resources/previews/022/100/835/original/paypal-logo-transparent-free-png.png'
+      
+        }
   },
 
 methods: {
+  
+
   onSearchType: function(){
 
 const search = document.querySelector('.div').style.display='block'
-     var url = 'https://newsapi.org/v2/everything?apiKey=1fb27fc9978d48ecadb4bdc77705325e&pageSize=100' + '&q=' + this.searchT;
     
+var url = ' https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=100' + '&q=' + this.searchT;  
       axios
           .get(url)
           .then(response=>{
-              this.news = response.data.articles
+              this.news = response.data.items
           })
           .catch(error=>{
           console.log(error)
@@ -262,87 +314,124 @@ const search = document.querySelector('.div').style.display='block'
     const searchClosed = document.querySelector('.div').style.display='none'
   }
 },
- 
-  
+mounted(){
+  const navbar = document.getElementById("main-navbar")
+
+window.addEventListener('scroll', function () {
+if (window.pageYOffset > 0) {
+  navbar.classList.add("navbar-after-scroll")
+} else {
+  navbar.classList.remove("navbar-after-scroll")
+}
+})
+} 
 }
 </script>
-<style lang="scss" scoped>
-#exampleModal span{
-  color: white;
-}
-.btn-close{
-  background-color: white;
-}
-.modal-title{
-  color: white;
-}
-.modal-body p{
-  color: white;
-}
-.modal-content{
-  background-color: #040d1d;
-}
-.img-donate{
-  margin: 5px;
-}
-#exampleModal{
-background-color: #040d1d;
-}
-a{
-  text-decoration: none;
-  color: white;
-//   list-style: none;
- }
-.close{
+<style lang="css" scoped>
 
-position: fixed;
-left:230px;
-top:90px;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Задайте цвет и прозрачность по своему выбору */
+  z-index: 1000; /* Убедитесь, что overlay находится над всем остальным */
+  display: none; /* Начнет с скрытым состоянием */}
+
+.dropdown-menu{
+  background-color:rgb(1, 1, 2);
 }
-.navbar{
-   background-color: #040d1d;
+.navbar {
+   
+   background-color: rgb(1, 1, 2);
+ }
+
+  /* .navbar-after-scroll {
+   
+    background-color: rgb(1, 1, 2);
+  } */
+
+  /* .navbar-after-scroll {
+  transition: background 2s ease-in-out, padding 2s ease-in-out;
 }
-.div{
-  // box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+
+
+.navbar-before-scroll {
+  transition: background 1s ease-in-out, padding 1s ease-in-out;
+} */
+/* navbar.navbar-before-scroll.navbar-after-scroll {
+  padding-top: 5px;
+  padding-bottom: 5px;
+} */
+.navbar .nav-link {
+        color: rgb( 92,187,246)  !important;
+      }
+      .navbar .nav-link {
+        color:rgb( 92,187,246)  !important;
+      }
+      button,input{
+        border: none !important;
+        box-shadow: none !important;
+      }
+      input{
+        list-style: none;
+      }
+      button{
+        color: rgb( 92,187,246) 
+      }
+      .form-control{
+        height: 30px;
+        color:rgb( 92,187,246);
+  font-weight: bold;
+      }
+      a{color:rgb( 92,187,246) ;
+        text-decoration: none;
+        /* color:rgb( 92,187,246)  */
+      }
+      .btn{
+        font-weight: bold;
+        color:rgb( 92,187,246) 
+      }
+
+
+.close{
+  position: fixed;
+  left:230px;
+  top:67px
+}
+      .div{
+  
   position: fixed;
   border:2px solid white;
  display: none;
   width: 250px;
   margin-left: px;
   margin-right: 30px;
-  // margin-top: 15px;
+ 
   border-radius:5px;
-  // overflow-y: scroll;
- margin-top: 90px;
+ 
+ margin-top: 68px;
   padding: 20px;
-  // max-height: calc(100vh - 56px);
+ 
   height:515px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color:#040d1d;
-    color:rgb(3, 3, 3);
+    background-color: rgb(1, 1, 2);
+    color:rgb(247, 245, 245);
     z-index: 5000;
-  //   display: none;
-  @media screen and (max-width:767px){
-    
-    
-  }
+  
+  
  }
  .wrap{
-  @media screen and (max-width: 767px){
-    position: absolute;
-    top:0;
-    height: 350px;
-  }
+ 
  }
-  // nav{
-    
-  // min-height: 75rem;
-  // padding-top: 4.5rem;
+ ::placeholder{
+  color:rgb( 92,187,246);
+  font-weight: bold;
+ }
+ .img-donate{
+  width: 70px;
+ }
+</style>   
 
-  // }
-  .dropdown-menu{
-    background-color:#040d1d; 
-    color: white;
-  }
-</style>

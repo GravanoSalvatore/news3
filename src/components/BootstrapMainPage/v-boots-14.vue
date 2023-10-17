@@ -6,9 +6,9 @@
        
       <div class="container marketing">
     
-        
-        
-       
+        <!-- <h4 class="mb-5"><strong>Science</strong></h4>
+        <hr/>
+        -->
     
        
     
@@ -20,6 +20,7 @@
           <div class="col-md-8">
     
             <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            v-if="item.urlToImage"
             :src='item.urlToImage'
             width="800" 
             height="500" 
@@ -28,7 +29,15 @@
             preserveAspectRatio="xMidYMid slice" 
             focusable="false">
           
-           
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+           v-else
+            src='../../assets/news.jpeg'
+            width="800" 
+            height="500" 
+        
+            role="img" aria-label="Placeholder: 500x500" 
+            preserveAspectRatio="xMidYMid slice" 
+            focusable="false">
         
     
           </div>
@@ -36,12 +45,12 @@
        
     
           <div class="col-md-4">
-            <i style="color: #f92601;" class="fa-thin fa-beat-fade" >Breaking news</i>
+            <i style="color: #f92601;" class="" >Breaking news</i>
             <h2 class="featurette-heading"> <a :href="item.url" target="_blank">{{item.title}}</a><span class="text-muted"></span></h2>
             <p class="lead"><strong>{{item.description}}</strong></p>
             <u class="text-success"> {{item.source.name}}</u><br/>
                     <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                    <u> {{ formatDateTime(item.publishedAt) }}</u>
           </div>
           
        </div>
@@ -86,6 +95,16 @@ export default {
     // },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
     async getData() {
 
       //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'

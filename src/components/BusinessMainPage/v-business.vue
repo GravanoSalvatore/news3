@@ -18,7 +18,11 @@
               width="320"
                height="180" >
                
-              <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img card-img-top" >
+              <img v-else  
+              width="320"
+               height="180" 
+               src="../../assets/news.jpeg" 
+               class="bd-placeholder-img card-img-top" >
               
   
               <div class="card-body">
@@ -27,7 +31,7 @@
                 <div class="">
                   <u class="text-success"> {{item.source.name}}</u><br/>
                     <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                    <u> {{ formatDateTime(item.publishedAt) }}</u>
                  
                 </div>
               </div>
@@ -41,7 +45,7 @@
   
   
   
-    <div class="pagination">
+    <div class="pagination mt-3">
               <span class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</span>
               <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
               <span class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</span>
@@ -59,7 +63,7 @@ export default {
       articles: [],
       currentPage: 1,
       totalPages: 1,
-      rows: 36,
+      rows: 20,
     };
   },
   computed: {
@@ -71,6 +75,17 @@ export default {
     },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); 
+  },
     async getData() {
 
       // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
@@ -115,6 +130,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.card-body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90px;
+}
 u{
   text-decoration: none;
 }
@@ -126,9 +146,7 @@ u{
   }
 }
 
-.page-numbers {
-  margin-top: 20px;
-}
+
 
 a {
   text-decoration: none;
@@ -140,14 +158,17 @@ a:hover {
   text-decoration: underline;
 }
 
+
+.page-numbers {
+  margin-top: 10px;
+  font-size: 10px;
+}
 .next-bt,
 .prev-bt {
-  margin: 13px;
-  // background-color:white;
-  // color: rgb(248, 2, 2);
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-  border-radius: 2px;
-  padding: 7px;
+  font-size: 10px;
+  margin: 7px;
+ 
+  padding: 3px;
   font-weight: bold;
 
 }

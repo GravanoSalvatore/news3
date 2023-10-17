@@ -3,22 +3,22 @@
       <div class="row"
  
   >
-    <div class="col-lg-4"
+    <div class="col-lg-3"
     v-for='item in  paginatedArticles'
   :key='item'>
-      <img  :src="item.urlToImage" class="bd-placeholder-img rounded-circle" width="220" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <img  :src="item.urlToImage" class="bd-placeholder-img rounded-circle" width="150" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
 
       <h5><a :href="item.url" target="_blank">{{item.title}}</a></h5>
       <!-- <p><strong>{{item.description}}</strong></p> -->
     
     </div>
     <br/>
-    <!-- <div class="pagination">
+    <div class="pagination">
           <button class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</button>
           <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
           <button class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
         </div>
-        -->
+       
   </div>
 
 
@@ -37,7 +37,7 @@ data() {
     articles: [],      
     currentPage: 1,    
     totalPages: 1,     
-    rows: 12,          
+    rows: 4,          
   };
 },
 computed: {
@@ -101,8 +101,8 @@ img{
         margin: 13px;
         // background-color:white;
         // color: rgb(248, 2, 2);
-        box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-        border-radius: 2px;
+        // box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+        // border-radius: 2px;
         padding: 7px;
         font-weight: bold;
         

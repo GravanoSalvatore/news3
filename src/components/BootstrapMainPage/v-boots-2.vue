@@ -1,5 +1,7 @@
 <template lang="">
-    <div class="container" style="background-color:#040d1d;color:white">
+    <div class="container" 
+    style=" background-image: linear-gradient(to right, #040d1d, #053684);
+;color:white">
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" 
         
         >
@@ -13,10 +15,10 @@ v-for="item in articles"
   </div>
   <div>
     <h2><a :href="item.url" target="_blanck">{{item.title}}</a></h2>
-    <p><strong>{{item.description}}</strong></p>
+    <p><strong>{{item.content}}</strong></p>
     <u class="text-success"> {{item.source.name}}</u><br/>
                     <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                    <u> {{ formatDateTime(item.publishedAt) }}</u>
    
   </div>
 </div>
@@ -44,7 +46,7 @@ export default {
       articles: [],
       currentPage: 1,
       totalPages: 1,
-      rows: 3,
+      rows: 6,
     };
   },
   computed: {
@@ -56,11 +58,21 @@ export default {
     },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
     async getData() {
 
       // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
       //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-      const pageSize = 3;
+      const pageSize = 6;
 
       try {
         const response = await fetch(

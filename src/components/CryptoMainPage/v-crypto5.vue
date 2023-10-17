@@ -12,7 +12,7 @@
             :class="{ 'carousel-item': true, active: index === 0 }"
           >
             <img v-if="item.imageurl" :src="item.imageurl" class="d-block w-100 " alt="Image">
-            <img v-else  src="../../assets/defi.jpeg" class="d-block w-100" alt="Image">
+            <img v-else  src="#" class="d-block w-100" alt="Image">
        <p> <a :href="item.url" target="_blank">{{ item.title }}</a></p>
         </div>
        

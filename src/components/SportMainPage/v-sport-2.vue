@@ -54,7 +54,7 @@
           <p class="lead"><strong>{{item.description}}</strong></p>
           <u class="text-success"> {{item.source.name}}</u><br/>
                     <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                    <u> {{ formatDateTime(item.publishedAt) }}</u>
         </div>
   
      </div>
@@ -98,6 +98,16 @@
       },
     },
     methods: {
+      formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
       async getData() {
        
         //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'

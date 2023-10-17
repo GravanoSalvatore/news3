@@ -62,7 +62,8 @@ export default {
   <div>
     <main class="mt-4 mb-5">
     <div class="container">
-     
+      <h4 class="mb-5"><strong>Technology</strong></h4>
+      <hr/>
       <div class="row">
        
         <div class="col-md-8 mb-4">
@@ -73,7 +74,9 @@ export default {
       :key="item"
           
           >
-            <img :src="item.urlToImage"
+            <img  v-if="item.urlToImage" :src="item.urlToImage"
+              class="img-fluid shadow-2-strong rounded-5 mb-4" alt="" />
+             <img  v-else src="../assets/news.jpeg"
               class="img-fluid shadow-2-strong rounded-5 mb-4" alt="" />
 
             <div class="row align-items-center mb-4">
@@ -120,7 +123,7 @@ export default {
             <section class="text-center border-bottom pb-4 mb-4">
               <div class="bg-image hover-overlay ripple mb-4">
                 <img
-                  src="../assets/defi.jpeg"
+                  src="../assets/news.jpeg"
                   class="img-fluid" />
                 <a href="https://mdbootstrap.com/docs/standard/" target="_blank">
                   <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
@@ -131,8 +134,8 @@ export default {
               <p>
                 Decentralized Finance (DeFi) is an emerging and exciting paradigm of financial services that eliminates intermediaries and provides users with freedom and control over their finances. DeFi leverages blockchain technology to create decentralized applications (DApps) that allow users to exchange, lend, earn, and manage their assets without the involvement of traditional financial institutions.
               </p>
-              <a role="button" class="btn btn-secondary" href="https://mdbootstrap.com/docs/standard/"
-                target="_blank">Defi</a>
+              <!-- <a role="button" class="btn btn-secondary" href="https://mdbootstrap.com/docs/standard/"
+                target="_blank">Defi</a> -->
             </section>
           
             <section class="text-center">
@@ -231,6 +234,14 @@ u,a{
 a:hover{
   text-decoration: underline;
 }
+
+.embed-responsive{ 
+
+list-style: none;
+border: none !important;
+box-shadow: none !important;
+}
+
 .video {
   // @media screen and (max-width: 1105px) {
   //   display: none;

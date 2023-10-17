@@ -20,7 +20,7 @@
          
             >
               <img v-if="item.urlToImage" :src="item.urlToImage" class="img-fluid" />
-              <img v-else src="../assets//news.jpeg" class="img-fluid" />
+              <img v-else src="../assets/news.jpeg" class="img-fluid" />
               
               <a href="#!">
                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
@@ -60,7 +60,7 @@
 </div>
     </section>
    
-    
+    <h4 class="mb-5"><strong>Entertainment</strong></h4>
   </div>
 </main>
 
@@ -82,7 +82,7 @@
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img v-if="item.urlToImage" :src="item.urlToImage"  class="img-fluid img" />
 
-                <img v-else src="../assets//news.jpeg"  class="img-fluid img" />
+                <img v-else src="../assets/news.jpeg"  class="img-fluid img" />
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -104,13 +104,14 @@
 
        
       </section>
-     
+      <h4 class="mb-5"><strong>Sport</strong></h4>
     </div>
+   
   </main>
  
 
 <hr/>
-  <ai/>
+  <!-- <ai/> -->
   
  
  
@@ -119,10 +120,10 @@
   </div>
 </template>
 <script>
-import ai from './Ai.vue'
+import ai from "./Ai.vue";
 export default {
-  components:{
-ai
+  components: {
+    ai,
   },
   data() {
     return {
@@ -134,7 +135,6 @@ ai
   },
   computed: {
     // paginatedArticles() {
-
     //   const start = (this.currentPage - 1) * this.rows;
     //   const end = start + this.rows;
     //   return this.articles.slice(start, end);
@@ -142,7 +142,6 @@ ai
   },
   methods: {
     async getData() {
-
       //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
       // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e'
       const pageSize = 6;
@@ -155,43 +154,42 @@ ai
         const data = await response.json();
         return data.items;
       } catch (error) {
-        console.error('Error fetching news:', error);
+        console.error("Error fetching news:", error);
         return [];
       }
     },
     async fetchNews() {
-
       const articles = await this.getData();
       this.articles = articles;
       // this.totalPages = Math.ceil(articles.length / this.rows);
     },
     // nextPage() {
-    //  
+    //
     //   if (this.currentPage < this.totalPages) {
     //     this.currentPage++;
     //   }
     // },
     // prevPage() {
-    //  
+    //
     //   if (this.currentPage > 1) {
     //     this.currentPage--;
     //   }
     // },
   },
   mounted() {
-
     this.fetchNews();
   },
-}
+};
 </script>
 <style lang="scss" scoped>
-a{
+a {
   color: black;
 }
-a:hover{
+a:hover {
   text-decoration: underline;
 }
-u,a{
+u,
+a {
   text-decoration: none;
 }
 .card {
@@ -203,8 +201,7 @@ u,a{
   background-color: transparent !important;
 }
 
-
-.img{
+.img {
   max-height: 300px;
 }
 a {
@@ -222,6 +219,4 @@ a {
     margin-top: 45px;
   }
 }
-
-
 </style>

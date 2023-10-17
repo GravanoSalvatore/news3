@@ -52,7 +52,7 @@ export default {
           articles: [],      
           currentPage: 1,    
           totalPages: 1,    
-          rows: 15,         
+          rows: 10,         
         };
       },
       computed: {
@@ -123,10 +123,7 @@ export default {
 }
  .next-bt,.prev-bt{
               margin: 13px;
-              background-color:white;
-              color: rgb(248, 2, 2);
-              box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-              border-radius: 2px;
+             
               padding: 7px;
               font-weight: bold;
               
@@ -153,6 +150,11 @@ a:hover{
             .album{
                 background-color: transparent !important;
             } 
+            .card-text{
+              overflow-x:hidden;
+              overflow-y:auto;
+              height: 120px;
+             }
 </style>
 
 

@@ -25,19 +25,19 @@
                  height="180"
                >
                <div class="card-body">
-                 <p class="card-text">
+                 <div class="card-text">
                    <a :href="item.url" target="_blank">{{ item.title }}</a><br/>
                 
-           </p>
+                 </div>
                 
          <div class="d-flex justify-content-between align-items-center">
                   
                  </div>
                </div>
-               <div class="body"><a :href="item.url"  target="_blanck">{{ item.body }}</a></div>
+               <!-- <div class="body"><a :href="item.url"  target="_blanck">{{ item.body }}</a></div> -->
                <span class="text-success"> {{ item.source_info.name }}</span>
-               <span class="text-secondary"> {{ item.categories }}</span>
-               
+               <!-- <span class="text-secondary"> {{ item.categories }}</span>
+               -->
                <p></p>
 
               </div>
@@ -145,21 +145,18 @@
 }
   .next-bt,.prev-bt{
                margin: 13px;
-               background-color:white;
-               color: rgb(248, 2, 2);
-               box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-               border-radius: 2px;
+              
                padding: 7px;
                font-weight: bold;
                
              }
-             .next-bt:hover,.prev-bt:hover{
+             /* .next-bt:hover,.prev-bt:hover{
                background-image: linear-gradient(to right,#040d1d, #053684);
                color: white;
                
                
            
-             } 
+             }  */
  a{
    text-decoration: none;
    color:black;
@@ -175,5 +172,10 @@
              .album{
                  background-color: transparent !important;
              } 
+             .card-text{
+              overflow-x:hidden;
+              overflow-y:auto;
+              height: 110px;
+             }
  </style>
  

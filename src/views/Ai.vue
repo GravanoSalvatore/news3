@@ -74,7 +74,7 @@ export default {
                 
                >
                   <img v-if="item.urlToImage" :src="item.urlToImage" class="img-fluid" />
-                 <img v-else src='../assets//news.jpeg'>
+                 <img v-else src='../assets/news.jpeg'  class="img-fluid">
                   <a href="#!">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                   </a>
@@ -107,7 +107,7 @@ export default {
               <div class="bg-image hover-overlay ripple mb-4">
                 <br/><br/>
                 <img
-                  src="../assets/человек-в-пиджаке-кликает-на-виртуальный-экран-надпись-forex-trading-224134017.webp"
+                  src="../assets/news.jpeg"
                   class="img-fluid" />
                 <a href="https://mdbootstrap.com/docs/standard/" target="_blank">
                   <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
@@ -220,5 +220,11 @@ u{
   @media screen and (max-width: 280px) {
     width: 200px;
   }
+}
+.embed-responsive{ 
+
+list-style: none;
+border: none !important;
+box-shadow: none !important;
 }
 </style>

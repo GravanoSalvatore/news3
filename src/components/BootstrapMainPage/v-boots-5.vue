@@ -1,43 +1,70 @@
 <template lang="">
-    <main class="container">
-        <div class="row"
+  <div>
+      <main class="my-5">
+  <div class="container">
    
-    >
-      <div class="col-lg-4"
-      v-for='item in  paginatedArticles'
-    :key='item'>
-        <img v-if="item.urlToImage" :src="item.urlToImage" class="bd-placeholder-img rounded-circle" width="220" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <img v-else src="../../assets//news.jpeg" class="bd-placeholder-img rounded-circle" width="220" height="220"  role="img" focusable="false">
+    <section class="">
+      <h4 class="mb-5"><strong>General</strong></h4>
+      <hr/>
+      <div class="row">
 
-        <h2><a :href="item.url" target="_blank"><strong class="text-danger">{{item.title}}</strong></a></h2>
-       
-      </div>
-      <br/>
-      <!-- <div class="pagination">
-            <button class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</button>
-            <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
-            <button class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+        <div class="col-lg-3 col-md-12 mb-4"   
+        v-for="item in paginatedArticles"
+        :key="item"
+        >
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img class="bd-placeholder-img card-img-top" 
+                v-if="item.urlToImage"
+                :src='item.urlToImage'
+                width="100%"
+                 height="200" >
+              
+              <img v-else 
+              src="../../assets/news.jpeg" 
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+                 height="200" >
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+                 <p class="card-text"><a :href="item.url" target="_blank">{{item.title}}</a>
+              
+                  <u class="text-success"> {{item.source.name}}</u><br/>
+                  <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
+                  <u> {{ formatDateTime(item.publishedAt) }}</u>
+              
+                 </p>
+            </div>
           </div>
-          -->
-    </div>
+        </div>
+
+       
+      
+      </div>
+
+     
+    </section>
+    
+   
+  </div>
+</main> 
+
+   
 
 
-</main>
+  </div>
 </template>
 <script>
-import searchGrid from '@/views/Select-3-grid.vue'
-import search2 from '@/views/Select-3.vue'
 export default {
-  components: {
-    searchGrid,
-    search2
-  },
   data() {
     return {
       articles: [],
       currentPage: 1,
       totalPages: 1,
-      rows: 3,
+      rows: 8,
     };
   },
   computed: {
@@ -49,16 +76,26 @@ export default {
     },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
     async getData() {
-
-      // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-      // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+      
+      //  const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+      //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
       const pageSize = 100;
 
       try {
         const response = await fetch(
-          //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();
         return data.items;
@@ -68,19 +105,19 @@ export default {
       }
     },
     async fetchNews() {
-
+     
       const articles = await this.getData();
       this.articles = articles;
       this.totalPages = Math.ceil(articles.length / this.rows);
     },
     nextPage() {
-
+     
       if (this.currentPage < this.totalPages) {
         this.currentPage++;
       }
     },
     prevPage() {
-
+     
       if (this.currentPage > 1) {
         this.currentPage--;
       }
@@ -90,51 +127,26 @@ export default {
 
     this.fetchNews();
   },
-};
+}
 </script>
-<style lang="scss" scoped>
-.bd-placeholder-img {
-  @media screen and (max-width: 250px) {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-img {
-  margin: 10px;
-}
-
-.next-bt,
-.prev-bt {
-  margin: 13px;
-  background-color: white;
-  color: rgb(248, 2, 2);
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-  border-radius: 2px;
-  padding: 7px;
-  font-weight: bold;
+<style lang="css" scoped>
+a,u{
+text-decoration: none;
+color: black;
 
 }
-
-.next-bt:hover,
-.prev-bt:hover {
-  background-image: linear-gradient(to right, #040d1d, #053684);
-  color: white;
-
-
-
+a:hover{
+text-decoration: underline;
 }
+.card{ 
 
-a {
-  text-decoration: none;
-  color: rgb(1, 1, 1);
-  font-weight: bold;
+list-style: none;
+border: none !important;
+box-shadow: none !important;
 }
-
-a:hover {
-  text-decoration: underline;
+.card-text{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 50px;
 }
-
-span {
-  margin-top: 20px;
-}</style>
+</style>

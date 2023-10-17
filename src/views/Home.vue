@@ -1,45 +1,61 @@
 <template lang="">
-  
-  <br/><br/>
-    <main class="container">
-      <br/>
-      
-      <br/><br/>
-      
-    <boots14/>
-    <boots1/>
+
+ <!-- <br/><br/><br/><br/> -->
+  <baner/>
+     <main class="container"> 
+     
+      <boots14/>
+      <boots1/>
+    <boots5/>
+
+   
+
+    <!-- <boots3/> -->
+    
+    
+    
+    
+    
+           
    
   
-    <boots2/>
+   <boots2/>
 
 
    <ico/>
+  </main>
+  <br/><br/>
+<carousel/>
+<br/>
 
-
-    <boots5/>
+  
    <br/>
-    <boots3/>
+  <!-- <boots3/> -->
     
-    <boots11/>
+      <boots11/>
     <hr/>
-    <stocks/>
-   <!-- <boots4/> -->
-    
+    <stocks/> 
+    <boots3/>
+  <br/><br/>
+    <carousel2/>
  
  
     
-    <boots7/>
+   <boots7/>
    
     
-     <boots12/>
+      <boots12/>
     
-    </main>
+   
     </template>
     <script>
+    import carousel from '../components/Carousel/v-carousel.vue'
+    import carousel2 from '../components/Carousel/v-carousel-2.vue'
+    import baner from '../components/Baner/v-baner.vue'
     import ico from './Ico.vue'
     import stocks from './Stocks.vue'
     import test from '../components/BootstrapMainPage/v-test.vue'
-     import boots1 from '../components/BootstrapMainPage/v-boots-1.vue'
+    import boots1 from '../components/BootstrapMainPage/v-boots-1.vue'
     import boots2 from '../components/BootstrapMainPage/v-boots-2.vue'
     import boots3 from '../components/BootstrapMainPage/v-boots-3.vue'
     import boots4 from '../components/BootstrapMainPage/v-boots-4.vue'
@@ -61,6 +77,9 @@
     // import search2 from '@/views/Select-3.vue'
     export default {
       components:{
+        carousel2,
+        carousel,
+        baner,
         ico,
         stocks,
         test,
@@ -141,6 +160,21 @@
     };
     </script>
     <style lang="scss" scoped>
+    .video {
+ 
+
+  @media screen and (max-width: 320px) {
+    width: 250px;
+  }
+
+  @media screen and (max-width: 280px) {
+    width: 200px;
+  }
+}
+    .div-video,.card{
+                border: none !important;
+                box-shadow: none !important;
+            }
     .page-numbers{
       margin-top: 20px;
     }

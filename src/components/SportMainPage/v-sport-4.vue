@@ -12,7 +12,7 @@
           :class="{ 'carousel-item': true, active: index === 0 }"
         >
           <img v-if="item.urlToImage" :src="item.urlToImage" class="d-block w-100" alt="Image">
-          <img v-else  src="../../assets/defi.jpeg" class="d-block w-100" alt="Image">
+          <img v-else  src="../../assets/news.jpeg" class="d-block w-100" alt="Image">
      <p> <a :href="item.url" target="_blank">{{ item.title }}</a></p>
       </div>
      
@@ -56,10 +56,10 @@ export default {
       try {
         const response = await axios.get(
           ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
-         // `https://newsapi.org/v2/top-headlines?category=sport&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+         // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
 
-       
+        
         this.images = response.data.items.map((article) => ({
           urlToImage: article.urlToImage,title:article.title,url:article.url,
         }));

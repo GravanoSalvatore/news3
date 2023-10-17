@@ -26,7 +26,7 @@
                   <p class="card-text"><a :href="item.url" target="_blank">{{item.title}}</a></p>
                   <u class="text-success"> {{item.source.name}}</u><br/>
                     <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                    <u> {{ formatDateTime(item.publishedAt) }}</u>
                   <div class="d-flex justify-content-between align-items-center">
                     
                    
@@ -69,6 +69,16 @@ export default {
     },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
     async getData() {
 
       // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
@@ -77,8 +87,8 @@ export default {
 
       try {
         const response = await fetch(
-          // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+           //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+         ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
         );
         const data = await response.json();
         return data.items;

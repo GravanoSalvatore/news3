@@ -22,18 +22,18 @@
           >
             <div class="card shadow-sm" >
               <img class="bd-placeholder-img card-img-top" 
-              
+              v-if="item.urlToImage"
               :src='item.urlToImage'
               width="320"
                height="180" >
                
-              
+               <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img card-img-top" >
   
               <div class="card-body">
                 <p class="card-text"><a :href="item.url" target="_blank">{{item.title}}</a></p>
                 <u class="text-success"> {{item.source.name}}</u><br/>
-                    <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                  <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
+                  <u> {{item.publishedAt}}</u>
                 <div class="d-flex justify-content-between align-items-center">
                   
                  
@@ -67,7 +67,7 @@ export default {
         articles: [],       
         currentPage: 1,    
         totalPages: 1,     
-        rows: 36,          
+        rows: 20,          
       };
     },
     computed: {
@@ -82,50 +82,49 @@ export default {
       async getData() {
         
        // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-       //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+      // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
         const pageSize = 100;
         
         try {
           const response = await fetch(
-            ` https://api-epicnews404.azurewebsites.net/Articles?SiteId=1&Query=1&Language=52&Page=1&pageSize=${pageSize}`
-            //` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
-            //`https://newsapi.org/v2/top-headlines?category=general&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+           // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           );
           const data = await response.json();
-          return data;
+          return data.items;
         } catch (error) {
           console.error('Error fetching news:', error);
           return [];
         }
       },
       async fetchNews() {
-       
+        
         const articles = await this.getData();
         this.articles = articles;
         this.totalPages = Math.ceil(articles.length / this.rows);
       },
       nextPage() {
-       
+        
         if (this.currentPage < this.totalPages) {
           this.currentPage++;
         }
       },
       prevPage() {
-      
+        
         if (this.currentPage > 1) {
           this.currentPage--;
         }
       },
     },
     mounted() {
-
+     
       this.fetchNews();
     },
 }
 </script>
 <style lang="scss" scoped>
 u{
-  text-decoration: none;
+text-decoration: none;
 }
 .pagination{
   margin-left: 80px;

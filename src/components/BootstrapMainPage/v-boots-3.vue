@@ -1,178 +1,127 @@
 <template lang="">
-  
+  <div>
+      <main class="my-5">
+  <div class="container">
+   
+    <section class="">
+      <!-- <h4 class="mb-5"><strong>Business news</strong></h4> -->
+      <div class="row">
 
-    <main>
-    
-       
-      <div class="container marketing">
-    
-        
-        
-      
-    
-       
-    
-        <div class="row featurette"
+        <div class="col-lg-2 col-md-12 mb-4"   
         v-for="item in paginatedArticles"
-       :key="item"
+        :key="item"
         >
-          <div class="col-md-7">
-            
-            <h2 class="featurette-heading"> <a :href="item.url" target="_blank">{{item.title}}</a><span class="text-muted"></span></h2>
-            <p>{{item.content}}</p>
-            <u class="text-success"> {{item.source.name}}</u><br/>
-            <p class="lead"><strong>{{item.author}}</strong></p> 
-           
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img  :src="item.urlToImage" class="img-fluid" />
+              <!-- <img v-else src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" > -->
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a :href="item.url" target="_blabk">{{item.title}}</a></h5>
+              
+            </div>
           </div>
-          
-          <div class="col-md-5">
-    
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
-            v-if="item.urlToImage"
-            :src='item.urlToImage'
-            width="500" 
-            height="500" 
-        
-            role="img" aria-label="Placeholder: 500x500" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-          
-        
-            <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" >
-          </div>
+        </div>
+
        
-       
-    
-        
-    
-       </div>
-       <!-- <div class="pagination">
-                <button class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</button>
-                <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
-                <button class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
-              </div> -->
-       
-    
+      
       </div>
+
+     
+    </section>
     
-    
-      
-      
-    </main>
-    
-    
-    </template>
+   
+  </div>
+</main> 
+
+   
+
+
+  </div>
+</template>
 <script>
-import searchGrid from '@/views/Select-3-grid.vue'
-import search2 from '@/views/Select-3.vue'
+
 export default {
-  components: {
-    searchGrid,
-    search2
-  },
-  data() {
-    return {
-      articles: [],
-      currentPage: 1,
-      totalPages: 1,
-      rows: 4,
-    };
-  },
-  computed: {
-    paginatedArticles() {
+components:{
 
-      const start = (this.currentPage - 1) * this.rows;
-      const end = start + this.rows;
-      return this.articles.slice(start, end);
-    },
-  },
-  methods: {
-    async getData() {
+},
+data() {
+return {
+  articles: [],      
+  currentPage: 1,    
+  totalPages: 1,     
+  rows: 12,          
+};
+},
+computed: {
+paginatedArticles() {
+ 
+  const start = (this.currentPage - 1) * this.rows;
+  const end = start + this.rows;
+  return this.articles.slice(start, end);
+},
+},
+methods: {
+async getData() {
+ 
+  //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
+ // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+  const pageSize = 100;
+  
+  try {
+    const response = await fetch(
+      ` https://api-epicnews404.azurewebsites.net/Articles?SiteId=1&Query=1&Language=52&Page=1&pageSize=${pageSize}`
+     // ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+     //`https://newsapi.org/v2/top-headlines?category=general&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching news:', error);
+    return [];
+  }
+},
+async fetchNews() {
+  
+  const articles = await this.getData();
+  this.articles = articles;
+  this.totalPages = Math.ceil(articles.length / this.rows);
+},
+nextPage() {
+ 
+  if (this.currentPage < this.totalPages) {
+    this.currentPage++;
+  }
+},
+prevPage() {
+  
+  if (this.currentPage > 1) {
+    this.currentPage--;
+  }
+},
+},
+mounted() {
 
-      //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-      //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
-      const pageSize = 100;
-
-      try {
-        const response = await fetch(
-          //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
-        );
-        const data = await response.json();
-        return data.items;
-      } catch (error) {
-        console.error('Error fetching news:', error);
-        return [];
-      }
-    },
-    async fetchNews() {
-
-      const articles = await this.getData();
-      this.articles = articles;
-      this.totalPages = Math.ceil(articles.length / this.rows);
-    },
-    nextPage() {
-
-      if (this.currentPage < this.totalPages) {
-        this.currentPage++;
-      }
-    },
-    prevPage() {
-
-      if (this.currentPage > 1) {
-        this.currentPage--;
-      }
-    },
-  },
-  mounted() {
-
-    this.fetchNews();
-  },
+this.fetchNews();
+},
 };
 </script>
-<style lang="scss" scoped>
-u{
-  text-decoration: none;
+<style lang="css" scoped>
+a{
+text-decoration: none;
+color: black;
+font-size:15px;
 }
-.container {
-  background-color: #040d1d;
+a:hover{
+text-decoration: underline;
 }
+.card{ 
 
-img {
-  margin: 10px;
+list-style: none;
+border: none !important;
+box-shadow: none !important;
 }
-
-.next-bt,
-.prev-bt {
-  margin: 13px;
-  background-color: white;
-  color: rgb(248, 2, 2);
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-  border-radius: 2px;
-  padding: 7px;
-  font-weight: bold;
-
-}
-
-.next-bt:hover,
-.prev-bt:hover {
-  background-image: linear-gradient(to right, #040d1d, #053684);
-  color: white;
-
-
-
-}
-
-a,
-p {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-span {
-  margin-top: 20px;
-}</style>
+</style>

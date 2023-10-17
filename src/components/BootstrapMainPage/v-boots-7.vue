@@ -12,7 +12,8 @@
             <div class="col p-4 d-flex flex-column position-static">
               <h5 class="mb-0"><strong> <a :href="item.url" target="_blank" class="stretched-link">{{item.title}}</a></strong></h5>
               <u class="text-success"> {{item.source.name}}</u><br/>
-                   
+              <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
+              <u> {{ formatDateTime(item.publishedAt) }}</u> 
             </div>
             <div class="col-auto d-none d-lg-block">
               <img class="bd-placeholder-img" 
@@ -25,11 +26,14 @@
               preserveAspectRatio="xMidYMid slice" 
               focusable="false">
              
-              <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img">
+              <img v-else src="../../assets/news.jpeg" width="220" 
+              height="140" class="bd-placeholder-img">
+        
             </div>
+            <hr/>
           </div>
         </div>
-       
+      
       </div>
     
     </div>
@@ -53,6 +57,16 @@ export default {
     },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
     async getData() {
 
       // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'

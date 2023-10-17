@@ -1,12 +1,17 @@
 <template lang="">
     <div>
         
-    <hr/>
-    
+   
+     
+ 
+
+      
+   
     
       <div class="album py-5 bg-light">
         <div class="container">
-    
+          <h4 class="mb-5"><strong>Business</strong></h4>
+<hr/>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col" 
             v-for="item in paginatedArticles"
@@ -26,7 +31,7 @@
                   <p class="card-text"><a :href="item.url" target="_blank">{{item.title}}</a><br/>
                     <u class="text-success"> {{item.source.name}}</u><br/>
                     <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u></p>
+                    <u> {{ formatDateTime(item.publishedAt) }}</u></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                    
@@ -40,7 +45,7 @@
       </div>
     
     
-    
+   
     
       <!-- <div class="pagination">
                 <button class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</button>
@@ -69,6 +74,16 @@ export default {
     },
   },
   methods: {
+    formatDateTime(dateTime) {
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    }
+    return new Date(dateTime).toLocaleString(undefined, options); },
     async getData() {
       
       //  const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
@@ -158,7 +173,9 @@ a:hover {
 
 .album {
   background-color: transparent !important;
-}</style>
+}
+
+</style>
 
 
 

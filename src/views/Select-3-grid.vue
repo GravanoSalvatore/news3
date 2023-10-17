@@ -17,7 +17,7 @@
                  :src='item.urlToImage' 
                  :alt='alt'>
               <img  class="col-grid-4__block-grid-content-image img" 
-                    v-else src="../assets/sport.jpeg" alt="img"> 
+                    v-else src="#" alt="img"> 
             <p class="col-grid-4__block-grid-content-paragraph">
               <a class="col-grid-4__block-grid-content-paragraph-link" :href="item.url" target="_blank "> {{ item.title }} </a>
             </p>

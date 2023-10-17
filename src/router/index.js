@@ -4,9 +4,9 @@ import Ico from "@/views/Ico.vue";
 import Home from "@/views/Home.vue";
 import Crypto from "@/views/Crypto.vue";
  import Sport from "@/views/Sport.vue";
-import Exchange from "@/views/Exchange.vue";
-import MainCrypto from "@/views/MainCrypto.vue";
-import News from "@/views/News.vue";
+ import Top from "@/views/TopCompany.vue";
+//import MainCrypto from "@/views/MainCrypto.vue";
+//import General from "@/views/General.vue";
  import People from "@/views/People.vue";
 import Nft from "@/views/Nft.vue";
 import Business from "@/views/Business.vue";
@@ -23,92 +23,106 @@ const routes = [
     path: "/",
     component: Home,
     name: "Home",
+    meta: { title: "HOME" },
+
+    
   },
   {
     path: "/Crypto",
     component: Crypto,
     name: "Crypto",
-  },
+    meta: { title: "CRYPTO" }},
+   
+      {
+        path: "/Nft",
+        component: Nft,
+        meta: { title: "NFT" },
+      },
+      
+      
+      {
+        path: "/People",
+        component: People,
+        meta: { title: "PEOPLE" },
+      },
+      {
+        path: "/Defi",
+        component: Defi,
+        meta: { title: "DEFI" },
+      },
+      {
+        path: "/CryptoPage",
+        component: CryptoPage,
+        meta: { title: "CRYPTOPAGE" }
+    },
   {
     path: "/Sport",
     component: Sport,
     name: "Sport",
+    meta: { title: "SPORT" },
   },
 
-  {
-    path: "/Exchange",
-    component: Exchange,
-    name: "Exchange",
-  },
-   {
-    path: "/News",
-    component: News,
-    name: News,
-  },
-  {
-    path: "/MainCrypto",
-    component: MainCrypto,
-    name: "MainCrypto",
-  },
-  {
-    path: "/People",
-    component: People,
-    name: "People",
-  },
-   {
-    path: "/Nft",
-    component: Nft,
-    name: "Nft",
-  },
+  
   {
     path: "/Business",
     component: Business,
     name: "Business",
+    meta: { title: "BUSINESS" },
   },
-  {
-    path: "/Defi",
-    component:Defi,
-    name: "Defi",
-  },
+  
   {
     path: "/Stocks",
     component: Stocks,
     name: "Stocks",
+    meta: { title: "STOCKS" },
   },
    {
     path: "/Tech",
     component: Tech,
     name: "Tech",
+    meta: { title: "TECH" },
   },
   {
     path: "/CryptoPage",
     component: CryptoPage,
     name: "CryptoPage",
+    meta: { title: "CRYPTOPAGE" },
   },
   {
     path: "/Entertainment",
     component: Entertainment,
     name: "Entertainment",
+    meta: { title: "E!" },
   },
   {
     path: "/Science",
     component: Science,
     name: "Science",
+    meta: { title: "SCIENCE" },
   },
   {
     path: "/Health",
     component: Health,
     name: "Health",
+    meta: { title: "HEALTH" },
   },
   {
     path: "/Ai",
     component: Ai,
     name: "Ai",
+    meta: { title: "AI" },
   },
   {
     path: "/Ico",
     component: Ico,
     name: "Ico",
+    meta: { title: "ICO" },
+  },
+  {
+    path: "/Top",
+    component: Top,
+    name: "Top",
+    meta: { title: "TOP" },
   },
 ];
 
