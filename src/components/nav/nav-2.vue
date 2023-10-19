@@ -125,7 +125,7 @@ New York, NY 10012, US<br/>
  
  
 >
-<router-link to="/" class="text-secondary">Home</router-link>
+<router-link @click="change" to="/" class="text-secondary">Home</router-link>
 </button>
 <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
  <li><a class="dropdown-item" href="#">Action</a></li>
@@ -359,7 +359,9 @@ export default {
   },
 
 methods: {
-  
+  change(){
+  let change = document.getElementById("intro7").style.backgroundImage='url(https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg)'
+  },
 
 //   onSearchType: function(){
 

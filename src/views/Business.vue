@@ -1,6 +1,6 @@
 
 <template lang="">
-  <baner/>
+  <!-- <baner/> -->
  
     <br/>
     <business2/>

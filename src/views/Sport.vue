@@ -1,7 +1,7 @@
 <template lang="">
   
  
-  <baner/>
+  <!-- <baner/> -->
 
   <br/><br/>
   <sport2/>

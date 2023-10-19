@@ -1,7 +1,7 @@
 <template lang="">
   <!-- <br/><br/> -->
   <div>
-   <baner/>
+   <!-- <baner/> -->
    <br/>
     <tech2/>
     <tech6/>

@@ -1,7 +1,7 @@
 <template lang="">
   
   
-  <baner/>
+  <!-- <baner/> -->
     <health2/>
    <health6/>
    <br/><br/>
