@@ -25,7 +25,7 @@ export default {
     #intro2 {
        
         background-image: url("https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg");
-        height: 100vh;
+        height: 120vh;
       }
       .text-white{
         margin-top: 250px;

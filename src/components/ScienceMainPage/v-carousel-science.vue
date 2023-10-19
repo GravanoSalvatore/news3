@@ -11,10 +11,10 @@
   <div class="carousel-inner">
   
     <div class="carousel-item active">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Jorney</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
             <h5 class="mb-4"></h5>
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -38,10 +38,10 @@
 
    
     <div class="carousel-item">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+      <div class="mask" style="">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Concerts and festivals</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
            
           </div>
         </div>
@@ -53,16 +53,12 @@
       <div
         class="mask"
         style="
-          background: linear-gradient(
-            45deg,
-            rgba(29, 236, 197, 0.7),
-            rgba(91, 14, 214, 0.7) 100%
-          );
+         
         "
       >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Business" > <h1 class="mb-3">Music & Cinema</h1></router-link>
+            <router-link to="/Business" > <h1 class="mb-3"></h1></router-link>
            
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -93,7 +89,7 @@ export default {
     }
 
     .carousel-item:nth-child(1) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+      background-image: url('https://www.mos.org/sites/dev-elvis.mos.org/files/images/main/uploads/slides/live-presentations_science-snapshot_0.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -105,7 +101,7 @@ export default {
       background-position: center center;
     }
     .carousel-item:nth-child(3) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+      background-image: url('https://www.openaccessgovernment.org/wp-content/uploads/2020/02/Computing-and-mathematics-Forever-entwined-%C2%A9-Krisana-Antharith-.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;

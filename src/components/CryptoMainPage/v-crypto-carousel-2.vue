@@ -10,46 +10,44 @@
  
   <div class="carousel-inner">
   
-    <div class="carousel-item active">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+   
+       <div class="carousel-item active">
+        <router-link to="/Crypto/Nft" >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.1);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
-            <h5 class="mb-4"></h5>
-            <!-- <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://www.youtube.com/watch?v=c9B4TPnak1A"
-              role="button"
-              rel="nofollow"
-              target="_blank"
-              >Start tutorial</a
-            > -->
-            <!-- <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://mdbootstrap.com/docs/standard/"
-              target="_blank"
-              role="button"
-              >Download MDB UI KIT</a
-            > -->
+
+           
+            
           </div>
         </div>
       </div>
+    </router-link>
     </div>
 
-   
-    <div class="carousel-item">
+ 
+
+  
+  <div class="carousel-item">
+    <router-link to="/Crypto/Nft" >
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
+           <h1 class="mb-3"></h1>
            
           </div>
         </div>
       </div>
+    </router-link>
     </div>
 
-   
+  
+
+
+
+  
     <div class="carousel-item">
+      <router-link to="/Crypto/Defi" >
       <div
         class="mask"
         style="
@@ -58,19 +56,15 @@
       >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Business" > <h1 class="mb-3"></h1></router-link>
+            <h1 class="mb-3"></h1>
            
-            <!-- <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://mdbootstrap.com/docs/standard/content-styles/masks/"
-              target="_blank"
-              role="button"
-              >Sport</a
-            > -->
+           
           </div>
         </div>
       </div>
+    </router-link>
     </div>
+ 
   </div>
 
 </div>
@@ -95,13 +89,13 @@ export default {
       background-position: center center;
     }
     .carousel-item:nth-child(2) {
-      background-image: url('https://e1.pxfuel.com/desktop-wallpaper/683/846/desktop-wallpaper-bored-ape-yacht-club-lead-artist-set-to-release-her-new-nft-nft-monkey.jpg');
+      background-image: url('https://telegra.ph/file/4b05d8fe4c7792756d1a1.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
     }
     .carousel-item:nth-child(3) {
-      background-image: url('https://lemon.school/storage/2023/07/img_7017.png');
+      background-image: url('https://iusauthor.com/images/DeFi-6.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;

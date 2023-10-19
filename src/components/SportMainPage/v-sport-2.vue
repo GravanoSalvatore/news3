@@ -38,7 +38,7 @@
             role="img" aria-label="Placeholder: 500x500" 
             preserveAspectRatio="xMidYMid slice" 
             focusable="false">
-            <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
+            <img v-else :src="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
             height="500" 
         
             role="img" aria-label="Placeholder: 500x500" 
@@ -86,7 +86,8 @@
       return {
         articles: [],       
         currentPage: 1,    
-        rows: 1,         
+        rows: 1, 
+        img:'https://dovidka.biz.ua/wp-content/uploads/2015/12/tsikavi-fakty-pro-sport.jpg'        
       };
     },
     computed: {
@@ -116,7 +117,7 @@
         
         try {
           const response = await fetch(
-            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=10&Page=1&PageSize=${pageSize}`
            // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           );
           const data = await response.json();

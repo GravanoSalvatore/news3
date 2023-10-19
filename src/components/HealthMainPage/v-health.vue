@@ -21,7 +21,7 @@
               <img v-else  
               width="320"
                height="180" 
-               src="../../assets/news.jpeg" 
+               :src="img" 
                class="bd-placeholder-img card-img-top" >
               
   
@@ -64,6 +64,7 @@ export default {
       currentPage: 1,
       totalPages: 1,
       rows: 20,
+      img:'https://www.conchovalleyhomepage.com/wp-content/uploads/sites/83/2015/04/healthnews_1429720857397_104687_ver1.0.png?strip=1&w=640'        
     };
   },
   computed: {
@@ -94,7 +95,7 @@ export default {
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=8&Page=1&PageSize=${pageSize}`
           // `https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();

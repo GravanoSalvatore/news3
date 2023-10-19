@@ -1,20 +1,20 @@
 <template lang="">
-    <div id="introCarousel-2" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+    <div id="introCarousel-28" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
   
   <ol class="carousel-indicators">
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="0" class="active"></li>
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="1"></li>
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="2"></li>
+    <li data-mdb-target="#introCarousel-28" data-mdb-slide-to="0" class="active"></li>
+    <li data-mdb-target="#introCarousel-28" data-mdb-slide-to="1"></li>
+    <li data-mdb-target="#introCarousel-28" data-mdb-slide-to="2"></li>
   </ol>
 
  
   <div class="carousel-inner">
   
     <div class="carousel-item active">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Jorney</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
             <h5 class="mb-4"></h5>
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -41,7 +41,7 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Concerts and festivals</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
            
           </div>
         </div>
@@ -53,16 +53,12 @@
       <div
         class="mask"
         style="
-          background: linear-gradient(
-            45deg,
-            rgba(29, 236, 197, 0.7),
-            rgba(91, 14, 214, 0.7) 100%
-          );
+         
         "
       >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Business" > <h1 class="mb-3">Music & Cinema</h1></router-link>
+            <router-link to="/Business" > <h1 class="mb-3"></h1></router-link>
            
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -85,7 +81,7 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-#introCarousel-2,
+#introCarousel-28,
     .carousel-inner,
     .carousel-item,
     .carousel-item.active {
@@ -93,19 +89,19 @@ export default {
     }
 
     .carousel-item:nth-child(1) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+      background-image: url('https://www.lboro.ac.uk/media/wwwlboroacuk/external/content/newsandevents/news/2020/march/sport-main.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
     }
     .carousel-item:nth-child(2) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+      background-image: url('https://www.mmu.ac.uk/sites/default/files/styles/page_header_half/public/2022-09/sport.jpeg?h=4eb4501c&itok=geKWWn2C');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
     }
     .carousel-item:nth-child(3) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+      background-image: url('https://www.mmu.ac.uk/sites/default/files/styles/page_header_half/public/2021-01/elite%20sports.png?h=279670ce&itok=a8je9lyq');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -113,10 +109,10 @@ export default {
 
  
     @media (min-width: 992px) {
-      #introCarousel-2 {
+      #introCarousel-28 {
         margin-top: -58.59px;
       }
-      #introCarousel-2,
+      #introCarousel-28,
       .carousel-inner,
       .carousel-item,
       .carousel-item.active {

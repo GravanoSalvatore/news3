@@ -26,7 +26,7 @@ export default {
   #intro2 {
      
       background-image: url("https://eu-assets.simpleview-europe.com/bournemouth/imageresizer/?image=%2Fdbimgs%2FBIC%20Performance.jpg&action=FeaturedItemsGalleryProElite3x2");
-      height: 100vh;
+      height: 120vh;
     }
     .text-white{
       margin-top: 250px;

@@ -26,7 +26,7 @@ export default {
   #intro2 {
      
       background-image: url("https://standards.ieee.org/wp-content/uploads/2021/12/Connected-technologies-1920x1080-1.jpg");
-      height: 100vh;
+      height: 120vh;
     }
     .text-white{
       margin-top: 250px;

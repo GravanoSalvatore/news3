@@ -1,10 +1,10 @@
 <template lang="">
-    <div id="introCarousel-2" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+    <div id="introCarousel-25" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
   
   <ol class="carousel-indicators">
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="0" class="active"></li>
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="1"></li>
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="2"></li>
+    <li data-mdb-target="#introCarousel-25" data-mdb-slide-to="0" class="active"></li>
+    <li data-mdb-target="#introCarousel-25" data-mdb-slide-to="1"></li>
+    <li data-mdb-target="#introCarousel-25" data-mdb-slide-to="2"></li>
   </ol>
 
  
@@ -14,23 +14,9 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Jorney</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
             <h5 class="mb-4"></h5>
-            <!-- <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://www.youtube.com/watch?v=c9B4TPnak1A"
-              role="button"
-              rel="nofollow"
-              target="_blank"
-              >Start tutorial</a
-            > -->
-            <!-- <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://mdbootstrap.com/docs/standard/"
-              target="_blank"
-              role="button"
-              >Download MDB UI KIT</a
-            > -->
+            
           </div>
         </div>
       </div>
@@ -41,7 +27,7 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Concerts and festivals</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
            
           </div>
         </div>
@@ -62,15 +48,9 @@
       >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Business" > <h1 class="mb-3">Music & Cinema</h1></router-link>
+            <router-link to="/Business" > <h1 class="mb-3"></h1></router-link>
            
-            <!-- <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://mdbootstrap.com/docs/standard/content-styles/masks/"
-              target="_blank"
-              role="button"
-              >Sport</a
-            > -->
+           
           </div>
         </div>
       </div>
@@ -85,7 +65,7 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-#introCarousel-2,
+#introCarousel-25,
     .carousel-inner,
     .carousel-item,
     .carousel-item.active {
@@ -113,10 +93,10 @@ export default {
 
  
     @media (min-width: 992px) {
-      #introCarousel-2 {
+      #introCarousel-25 {
         margin-top: -58.59px;
       }
-      #introCarousel-2,
+      #introCarousel-25,
       .carousel-inner,
       .carousel-item,
       .carousel-item.active {

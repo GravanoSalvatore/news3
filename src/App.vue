@@ -13,12 +13,12 @@
 
     <navi />
     <cookies/>
-    <div class="top">
+   
   
       
-      <router-view />
+      <router-view class="top" />
      
-    </div>
+   
    <v-footer-component/>
   </v-app>
 </template>

@@ -4,8 +4,8 @@
   <div class="container">
    
     <section class="">
-      <h4 class="mb-5"><strong>General</strong></h4>
-      <hr/>
+      <!-- <h4 class="mb-5"><strong>General</strong></h4>
+      <hr/> -->
       <div class="row">
 
         <div class="col-lg-3 col-md-12 mb-4"   
@@ -94,7 +94,7 @@ export default {
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=11&Page=1&PageSize=${pageSize}`
           // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();

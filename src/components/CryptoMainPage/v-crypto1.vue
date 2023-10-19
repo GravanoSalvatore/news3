@@ -86,7 +86,7 @@
            
            try {
              const response = await fetch(
-               'https://min-api.cryptocompare.com/data/v2/news/?categories=Technology,Blockchain&excludeCategories=Regulation,Mining'
+               'https://min-api.cryptocompare.com/data/v2/news/?categories=BTC,ETH&excludeCategories=Sponsored'
              );
              const data = await response.json();
              return data.Data;

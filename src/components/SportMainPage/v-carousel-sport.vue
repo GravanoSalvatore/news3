@@ -14,7 +14,7 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Jorney</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
             <h5 class="mb-4"></h5>
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -41,7 +41,7 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Concerts and festivals</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
            
           </div>
         </div>
@@ -62,7 +62,7 @@
       >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Business" > <h1 class="mb-3">Music & Cinema</h1></router-link>
+            <router-link to="/Business" > <h1 class="mb-3"></h1></router-link>
            
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"

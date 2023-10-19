@@ -8,7 +8,7 @@
   
       
       
-     
+    
      
   
       <div class="row featurette"
@@ -28,7 +28,7 @@
             role="img" aria-label="Placeholder: 500x500" 
             preserveAspectRatio="xMidYMid slice" 
             focusable="false">
-            <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
+            <img v-else :src="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
             height="500" 
         
             role="img" aria-label="Placeholder: 500x500" 
@@ -49,14 +49,9 @@
         </div>
   
      </div>
-     <!-- <div class="pagination">
-              <span class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</span>
-              <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
-              <span class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</span>
-            </div> -->
-      <!-- /END THE FEATURETTES -->
+     
   
-    </div><!-- /.container -->
+    </div>
   
   
     
@@ -78,7 +73,8 @@
         articles: [],       
         currentPage: 1,    
         totalPages: 1,     
-        rows: 1,          
+        rows: 1, 
+        img:'https://www.shaikhandcoaccountants.com/wp-content/uploads/2021/11/business-news-2-shaikh.jpg'         
       };
     },
     computed: {
@@ -109,7 +105,7 @@
         
         try {
           const response = await fetch(
-            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Page=1&PageSize=${pageSize}`
            // `https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           );
           const data = await response.json();

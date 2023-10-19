@@ -26,7 +26,7 @@ export default {
   #intro2 {
      
       background-image: url("https://assets.weforum.org/community/image/3v8PB95CCSn86e5fowthRAybW4ajSY18z2FfVPi2spk.jpeg");
-      height: 100vh;
+      height: 120vh;
     }
     .text-white{
       margin-top: 250px;

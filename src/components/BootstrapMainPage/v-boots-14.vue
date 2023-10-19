@@ -113,7 +113,7 @@ export default {
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=7&Page=1&PageSize=${pageSize}`
           //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();

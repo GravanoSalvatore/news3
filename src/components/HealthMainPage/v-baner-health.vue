@@ -26,7 +26,7 @@ export default {
   #intro2 {
      
       background-image: url("https://s7d1.scene7.com/is/image/wbcollab/Health_Background_Nov21");
-      height: 100vh;
+      height: 120vh;
     }
     .text-white{
       margin-top: 250px;

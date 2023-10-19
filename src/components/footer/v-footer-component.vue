@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+
     <footer style="background-color:rgb(1, 1, 2);" class="text-center text-lg-start  text-muted mt-5">
   
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -118,7 +118,7 @@
   
 </footer>
 
-  </div>
+  
 </template>
 <script>
 export default {

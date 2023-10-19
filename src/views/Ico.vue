@@ -58,12 +58,12 @@ export default {
 </script> -->
 
 <template lang="">
-  <br/><br/><br/>
+  
   <div>
     <main class="mt-4 mb-5">
     <div class="container">
-      <h4 class="mb-5"><strong>Technology</strong></h4>
-      <hr/>
+      <!-- <h4 class="mb-5"><strong>Technology</strong></h4> -->
+     
       <div class="row">
        
         <div class="col-md-8 mb-4">
@@ -184,11 +184,11 @@ ai
 
       //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
       // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e'
-      const pageSize = 6;
+      const pageSize = 20;
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Page=1&PageSize=${pageSize}`
           //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();

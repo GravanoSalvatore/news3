@@ -8,7 +8,7 @@
   :key='item'>
       <!-- <img  :src="item.urlToImage" class="bd-placeholder-img rounded-circle" width="220" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"> -->
       <img  v-if="item.urlToImage" :src="item.urlToImage" class="bd-placeholder-img rounded-circle" width="150" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-<img  v-else src="../../assets/news.jpeg" class="bd-placeholder-img rounded-circle" width="150" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+<img  v-else :src="img" class="bd-placeholder-img rounded-circle" width="150" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
       
       <h6 class="card-body"><a :href="item.url" target="_blank">{{item.title}}</a></h6>
       <!-- <p><strong>{{item.description}}</strong></p> -->
@@ -39,7 +39,8 @@ data() {
     articles: [],       
     currentPage: 1,    
     totalPages: 1,     
-    rows: 4,          
+    rows: 4,  
+    img:'https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1697068800&semt=ais'                 
   };
 },
 computed: {
@@ -59,7 +60,7 @@ methods: {
     
     try {
       const response = await fetch(
-        ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+        ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Page=1&PageSize=${pageSize}`
       // `https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
       );
       const data = await response.json();

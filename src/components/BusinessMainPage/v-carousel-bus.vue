@@ -9,12 +9,12 @@
 
  
   <div class="carousel-inner">
-  
+    <router-link to="/Top" >
     <div class="carousel-item active">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Jorney</h1></router-link>
+             <h1 class="mb-3"></h1>
             <h5 class="mb-4"></h5>
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -35,13 +35,13 @@
         </div>
       </div>
     </div>
-
+  </router-link>
    
     <div class="carousel-item">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+      <div class="mask" style="">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Tech" > <h1 class="mb-3">Concerts and festivals</h1></router-link>
+            <router-link to="/Tech" > <h1 class="mb-3"></h1></router-link>
            
           </div>
         </div>
@@ -53,16 +53,13 @@
       <div
         class="mask"
         style="
-          background: linear-gradient(
-            45deg,
-            rgba(29, 236, 197, 0.7),
-            rgba(91, 14, 214, 0.7) 100%
-          );
+          
         "
       >
+      <router-link to="/Top" >  
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
-            <router-link to="/Business" > <h1 class="mb-3">Music & Cinema</h1></router-link>
+           <h1 class="mb-3"></h1>
            
             <!-- <a
               class="btn btn-outline-light btn-lg m-2"
@@ -73,6 +70,7 @@
             > -->
           </div>
         </div>
+      </router-link>
       </div>
     </div>
   </div>
@@ -93,19 +91,19 @@ export default {
     }
 
     .carousel-item:nth-child(1) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+      background-image: url('https://libertex.com/sites/default/files/inline-images/blue-chips-2.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
     }
     .carousel-item:nth-child(2) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+      background-image: url('https://media.zenfs.com/en/insidermonkey.com/5e8e147ea4a6c9a3457b194391481628');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
     }
     .carousel-item:nth-child(3) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+      background-image: url('https://lightyear.com/cms/instruments_o_854a724edb.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;

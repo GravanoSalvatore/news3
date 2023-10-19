@@ -39,7 +39,7 @@
             role="img" aria-label="Placeholder: 500x500" 
             preserveAspectRatio="xMidYMid slice" 
             focusable="false">
-            <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
+            <img v-else :src="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
             height="500" 
         
             role="img" aria-label="Placeholder: 500x500" 
@@ -52,9 +52,9 @@
   
         <div class="col-md-4">
           <h2 class="featurette-heading"> <a :href="item.url" target="_blank">{{item.title}}</a><span class="text-muted"></span></h2>
-          <p class="lead"><strong>{{item.description}}</strong></p>
+          <!-- <p class="lead"><strong>{{item.description}}</strong></p> -->
           <u class="text-success"> {{item.source.name}}</u><br/>
-                    <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
+                    <u><strong style="font-family:gotic;width:200px;"></strong></u><br/>
                     <u> {{ formatDateTime(item.publishedAt) }}</u>
         </div>
   
@@ -88,7 +88,8 @@
         articles: [],      
         currentPage: 1,    
         totalPages: 1,     
-        rows: 1,         
+        rows: 1, 
+        img:'https://www.conchovalleyhomepage.com/wp-content/uploads/sites/83/2015/04/healthnews_1429720857397_104687_ver1.0.png?strip=1&w=640'        
       };
     },
     computed: {
@@ -118,7 +119,7 @@
         
         try {
           const response = await fetch(
-            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+            `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=8&Page=1&PageSize=${pageSize}`
            // `https://newsapi.org/v2/top-headlines?category=health&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           );
           const data = await response.json();

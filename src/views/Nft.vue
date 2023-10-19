@@ -14,9 +14,9 @@
  <main class="my-5">
     <div class="container">
      
-      <section class="text-center">
+      <section >
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
-         <strong> Top 10 NFT Marketplaces You Should Know</strong>
+         <strong class="text-center"> Top 10 NFT Marketplaces You Should Know</strong>
         </h3>
 
         <p>NFTs are special tokens that represent one-of-a-kind digital assets, such as artwork or media, on the blockchain. An NFT is like a permanent digital proof that shows you own something, whether it’s a digital item or a physical object. It guarantees the authenticity and ownership of the asset.

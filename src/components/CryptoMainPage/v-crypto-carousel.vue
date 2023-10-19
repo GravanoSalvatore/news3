@@ -11,7 +11,7 @@
   <div class="carousel-inner">
   
     <div class="carousel-item active">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex  h-100">
           <div class="text-white container">
             <router-link to="/CryptoPage" > <h1 class="mb-3 mt-4">TOP-100</h1></router-link>
@@ -24,10 +24,10 @@
 
    
     <div class="carousel-item">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
         <div class="d-flex  h-100">
           <div class="text-white container">
-            <router-link to="/People" > <h1 class="mb-3 mt-4">People of crypto</h1></router-link>
+            <router-link to="/Crypto/People" > <h1 class="mb-3 mt-4">People of crypto</h1></router-link>
             <h5 class="mb-4"></h5>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default {
       background-size: cover;
     }
     .carousel-item:nth-child(3) {
-      background-image: url('https://images.moneycontrol.com/static-mcnews/2022/07/mariia-shalabaieva-fRqWbDS40Bg-unsplash-770x431.jpg?impolicy=website&width=770&height=431');
+      background-image: url('https://imageio.forbes.com/specials-images/imageserve/641223d5e1bacf622ecfd6f9/Digital-security-concept/960x0.jpg?format=jpg&width=960');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;

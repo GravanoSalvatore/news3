@@ -72,8 +72,8 @@
 </div>
 <div class="modal-body " style="color:white">
 globalnewshub@gmail.com<br/>
-167-169 Great Portland Street<br/>
-London 
+New York, NY 10012, US<br/>
+
 
 
 </div>
@@ -104,12 +104,20 @@ London
      <i class="fas fa-bars"></i>
    </button>
 
+
+
+
+
+
+
+
+   
   
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <img style="width:70px" :src="logo">
-     <span class="pl-3"> <bread/></span>
     
+    <vtime/>
       <div class="dropdown">
       
 <button
@@ -163,10 +171,12 @@ London
 </button>
 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   <li><router-link to="/Crypto" class="dropdown-item" href="#">Crypto</router-link></li>
- <li><router-link to="/People" class="dropdown-item" href="#">People of crypto</router-link></li>
- <li><router-link to="/Nft" class="dropdown-item" href="#">NFT</router-link></li>
- <li><router-link to="/Defi" class="dropdown-item" href="#">Defi</router-link></li>
- <li><router-link to="/CryptoPage" class="dropdown-item" href="#">TOP</router-link></li>
+  <li><router-link to="/Crypto/News" class="dropdown-item" href="#">News</router-link></li>
+
+  <li><router-link to="/Crypto/People" class="dropdown-item" href="#">People of crypto</router-link></li>
+ <li><router-link to="/Crypto/Nft" class="dropdown-item" href="#">NFT</router-link></li>
+ <li><router-link to="/Crypto/Defi" class="dropdown-item" href="#">Defi</router-link></li>
+ <li><router-link to="/Crypto/CryptoPage" class="dropdown-item" href="#">TOP</router-link></li>
 
 
 </ul>
@@ -202,20 +212,73 @@ London
         </ul>
 
 </div> 
-
+<div class="container-fluid">
+    <ul class="navbar-nav">
+    
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="flag-united-kingdom flag m-0"></i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item" href="#"
+              ><i class="flag-united-kingdom flag"></i>English
+              <i class="fa fa-check text-success ms-2"></i
+            ></a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
      </ul>
      
-    
-     
+     <span class=" mt-8"> <bread/></span>
+    <!-- <search/> -->
 
      <form class="d-flex" role="search">
-   <input   v-model="searchT" 
+   <input     
+       v-model="searchT" 
        placeholder="Search news" 
        v-on:input="onSearchType"  
        class="form-control me-2"  
        aria-label="Search"  
-       style="height:20px"  
-       type="search" >
+       style="height:20px;color:white;border:2px solid white;"  
+       type="search"
+       
+       
+       >
    
  </form>
     
@@ -225,7 +288,7 @@ London
  
  
  
- <ul class="navbar-nav flex-row">
+ <!-- <ul class="navbar-nav flex-row">
      
        <li class="nav-item">
          <a class="nav-link pe-2" href="#!">
@@ -247,7 +310,7 @@ London
            <i class="fab fa-instagram"></i>
          </a>
        </li>
-     </ul>
+     </ul> -->
    </div>
   
 
@@ -276,10 +339,12 @@ London
 
 </template>
 <script>
+import search from '@/views/Search.vue'
+import vtime from '../../views/Time.vue'
 import bread from '../../components/BreadCrams/v-bread-crams.vue'
 import axios from 'axios'
 export default {
-  components:{bread},
+  components:{bread,vtime,search},
   data(){
       return{
           news:[],
@@ -296,20 +361,36 @@ export default {
 methods: {
   
 
-  onSearchType: function(){
+//   onSearchType: function(){
 
-const search = document.querySelector('.div').style.display='block'
+// const search = document.querySelector('.div').style.display='block'
     
-var url = ' https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=100' + '&q=' + this.searchT;  
-      axios
-          .get(url)
-          .then(response=>{
-              this.news = response.data.items
-          })
-          .catch(error=>{
-          console.log(error)
-          });
-  },
+// var url = ' https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=100' + '&q=' + this.searchT;  
+//       axios
+//           .get(url)
+//           .then(response=>{
+//               this.news = response.data.items
+//           })
+//           .catch(error=>{
+//           console.log(error)
+//           });
+//   },
+
+onSearchType: function(){
+  
+  const search = document.querySelector('.div').style.display='block'
+      
+ // var url = ' https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=100' + '&q=' + this.searchT; 
+      var url = 'https://newsapi.org/v2/everything?apiKey=eb237649c2594555a26f68e392086d40&pageSize=100' + '&q=' + this.searchT;
+        axios
+            .get(url)
+            .then(response=>{
+                this.news = response.data.articles
+            })
+            .catch(error=>{
+            console.log(error)
+            });
+    },
   searchClose(){
     const searchClosed = document.querySelector('.div').style.display='none'
   }
@@ -329,15 +410,16 @@ if (window.pageYOffset > 0) {
 </script>
 <style lang="css" scoped>
 
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Задайте цвет и прозрачность по своему выбору */
-  z-index: 1000; /* Убедитесь, что overlay находится над всем остальным */
-  display: none; /* Начнет с скрытым состоянием */}
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1000;
+  display: none;}
 
 .dropdown-menu{
   background-color:rgb(1, 1, 2);
@@ -365,13 +447,13 @@ if (window.pageYOffset > 0) {
   padding-bottom: 5px;
 } */
 .navbar .nav-link {
-        color: rgb( 92,187,246)  !important;
+        color: rgb(246, 151, 92)  !important;
       }
       .navbar .nav-link {
         color:rgb( 92,187,246)  !important;
       }
       button,input{
-        border: none !important;
+        /* border: none !important; */
         box-shadow: none !important;
       }
       input{
@@ -380,11 +462,8 @@ if (window.pageYOffset > 0) {
       button{
         color: rgb( 92,187,246) 
       }
-      .form-control{
-        height: 30px;
-        color:rgb( 92,187,246);
-  font-weight: bold;
-      }
+      
+      
       a{color:rgb( 92,187,246) ;
         text-decoration: none;
         /* color:rgb( 92,187,246)  */
@@ -394,11 +473,16 @@ if (window.pageYOffset > 0) {
         color:rgb( 92,187,246) 
       }
 
-
+      @media (max-width: 767px){
+  .close{
+    top: 0px;
+  }
+ }
 .close{
   position: fixed;
   left:230px;
-  top:67px
+  top:85px
+  
 }
       .div{
   
@@ -411,7 +495,7 @@ if (window.pageYOffset > 0) {
  
   border-radius:5px;
  
- margin-top: 68px;
+ top: 85px;
   padding: 20px;
  
   height:515px;
@@ -423,15 +507,24 @@ if (window.pageYOffset > 0) {
   
   
  }
+ @media screen and(max-width: 767px){
+  .div{
+    margin-top: 5px;
+  }
+ }
  .wrap{
  
  }
  ::placeholder{
-  color:rgb( 92,187,246);
+  color:rgb(249, 251, 253);
   font-weight: bold;
  }
  .img-donate{
   width: 70px;
  }
+ .form-control{
+  background-color: black;
+ 
+}
 </style>   
 

@@ -1,5 +1,5 @@
 <template lang="">
-    <br/>
+   
    
       
 
@@ -11,19 +11,19 @@
       <!-- <div id="intro2" class="bg-image shadow-2-strong">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);"> -->
 
-<div class="container text-center">
+<div class="container text-center ">
 
   <select class="select " v-model="selectedCompany">
-    <option value="" disabled class="text-white"><span class="">Select Company</span></option>
+    <option value="" disabled class=""><span class="">Select Company</span></option>
     <option v-for="value in stock" :key="value.stock" :value="value">{{ value.companyName }}</option>
   </select>
-
+</div>
   <div v-if="selectedCompany">
    
    
 
 
-    <p class="card-text card-body">
+    <p class="card-text card-body text-black">
                   <h5 class="card-title "><strong> {{ selectedCompany.companyName }}</strong></h5>
                   <u class="">  <span>{{ selectedCompany.symbol }}</span></u><br/>
                   <u class="">  <span class="">Price:{{ selectedCompany.price}} $</span></u><br/>
@@ -40,12 +40,12 @@
                  <p> <u class="">  <span><strong>{{selectedCompany.description}}</strong></span></u></p><br/>
                   
  
-                  <button @click="openWebsite(selectedCompany.website)"><strong class="">{{selectedCompany.website}}</strong></button>
+                  <button @click="openWebsite(selectedCompany.website)"><strong class="text-dark ">{{selectedCompany.website}}</strong></button>
 
                    
                    
                 </p> 
-  </div>
+ 
 
 </div>
 
@@ -103,6 +103,9 @@ methods:{
  }
 </script>
 <style lang="scss" scoped>
+.text-dark{
+  font-size:9px
+}
 
 #intro2 {
      
@@ -111,15 +114,16 @@ methods:{
    }
 .select{
     margin-top: 100px;
-    width: 230px;
+    width: 180px;
     list-style: none;
-    border:2px solid grey;
+    border:2px solid rgb(11, 10, 10);
     padding:3px;
     border-radius: 5px;
 }
 .select{
-       
+      //  border: none !important;
         box-shadow: none !important;
+        list-style: none;
       }
 u,option{
     text-decoration: none;

@@ -2,7 +2,7 @@
   <div>
     
 
-    <main class="my-5">
+    <!-- <main class="my-5">
   <div class="container">
     <section>
       <div class="row gx-lg-5" 
@@ -25,22 +25,22 @@
               <a href="#!">
                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
               </a>
-            </div>
+            </div> -->
 
             
-            <div class="row mb-3">
-              <div class="col-6">
+            <!-- <div class="row mb-3">
+              <div class="col-6"> -->
                 <!-- <a href="" class="text-info"> -->
                   <!-- <i class="fas fa-plane"></i>
                  General -->
                 
                 <!-- </a> -->
-              </div>
+              <!-- </div> -->
 
               <!-- <div class="col-6 text-end">
                 <u> {{item.publishedAt}}</u>
               </div> -->
-            </div>
+            <!-- </div>
             
             <a href="" class="text-dark">
               <h5><strong><a :href="item.url" target="_blanck">{{item.title}}</a></strong></h5>
@@ -60,9 +60,9 @@
 </div>
     </section>
    
-    <h4 class="mb-5"><strong>Entertainment</strong></h4>
+   
   </div>
-</main>
+</main> -->
 
 <main class="my-5">
     <div class="container">
@@ -104,7 +104,7 @@
 
        
       </section>
-      <h4 class="mb-5"><strong>Sport</strong></h4>
+    
     </div>
    
   </main>
@@ -148,7 +148,7 @@ export default {
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=10&Page=1&PageSize=${pageSize}`
           //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();

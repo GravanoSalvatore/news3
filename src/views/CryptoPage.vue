@@ -1,27 +1,18 @@
  
 
 <template>
-    <div>
-        <div id="intro3" class="bg-image shadow-2-strong">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+   
+        <!-- <div id="intro3" class="bg-image shadow-2-strong">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
         <div class="container d-flex align-items-center justify-content-center text-center h-100">
-          <!-- <div class="text-white">
-            <h1 class="mb-3">Global News Hub</h1>
-            <h5 class="mb-4">Always the latest news as well as business and cryptocurrency news</h5>
-            <a class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button"
-              rel="nofollow" target="_blank">News</a>
-            <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank"
-              role="button">CryptoNews</a>
-          </div> -->
+         
         </div>
       </div>
-    </div>
-  <div class="container">
-  
-    </div>
+    </div> -->
+    <div class="container">
     <br/><br/>
-    <h1><strong>Top</strong></h1>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+    <!-- <h1><strong>Top</strong></h1> -->
+    <div class="row ">
   
    
       <div class="col" v-for="crypto in displayedCryptocurrencies" :key="crypto.id">
@@ -33,13 +24,19 @@
       
         <span class="symbol">({{ crypto.symbol }})</span><br/>
      <span> Price:${{ crypto.current_price }}</span><br/> <span>(Market Cap: ${{ crypto.market_cap.toLocaleString() }})</span>
-         <span :class="{'positive-change': crypto.price_change_percentage_24h > 0, 'negative-change': crypto.price_change_percentage_24h < 0}"><br/>
+         <!-- <span :class="{'positive-change': crypto.price_change_percentage_24h > 0, 'negative-change': crypto.price_change_percentage_24h < 0}"><br/>
         <span> 24h: {{ crypto.price_change_percentage_24h.toFixed(2) }}%</span>
         </span><br/>
        <span> 24h Volume: ${{ crypto.total_volume.toLocaleString() }}</span>
-        
+         -->
        
-            
+         <span :class="{'positive-change': crypto.price_change_percentage_24h > 0, 'negative-change': crypto.price_change_percentage_24h < 0}">
+  <br />
+  <span v-if="crypto.price_change_percentage_24h !== null">24h: {{ crypto.price_change_percentage_24h.toFixed(2) }}%</span>
+</span>
+<br />
+<span v-if="crypto.total_volume !== null">24h Volume: ${{ crypto.total_volume.toLocaleString() }}</span>
+
             <div v-if="crypto.exchange_with_max_volume">
               Largest Volume Exchange: {{ crypto.exchange_with_max_volume.name }} ({{ crypto.exchange_with_max_volume.symbol }})
               <br/>
@@ -95,8 +92,8 @@ export default {
           'https://api.coingecko.com/api/v3/coins/markets',
           {
             params: {
-              vs_currency: 'usd',
-              ids: 'bitcoin,ethereum,ripple,litecoin,cardano,polkadot,stellar,binancecoin,chainlink,bitcoin-cash,tezos,tron,theta-token,ethereum-classic,vechain,hedera-hashgraph,bitcoin-sv,neo,nem,helium,aave,decred,synthetix-network-token,elrond,icon,dai,solana,huobi-token,huobi-token,compound-ether,celsius-degree-token,yearn-finance,curve-dao-token,bittorrent,1inch,near-protocol,0x,maker,kyber-network,decentraland,quant-network,verge,shiba-inu,trust-wallet-token,ethereum-classic,siacoin,loopring,wax,sushiswap,ampleforth,fei-protocol,helium,terra,liquity-usd,aelf,injective-protocol,telos,electroneum,electric-coin-company,serum,binance-usd,augur,civic,trust-wallet-token,matic-network,tether', // Здесь добавлены идентификаторы для Matic (Polygon) и Tether (USDT)
+            vs_currency: 'usd',
+             ids:'bitcoin, ethereum, tether, binance-coin, cardano, xrp, solana, polkadot, dogecoin, usd-coin, avalanche, terra, elrond, chainlink, litecoin, bitcoin-cash, stellar, vechain, filecoin, tron, eos, monero, cosmos, tezos, ftx-token, neo, celsius-network, dash, iota, zcash, the-graph, hedgetrade, decentraland, arweave, sushiswap, basic-attention-token, zilliqa, 0x, augur, civic, dharma, band-protocol, edgeware, staked-ether, ankr, ren, verge, crypto-com-coin, ampleforth, request, truefi, illuvium, keep3rv1, smooth-love-potion, aelf, atletico-madrid-fan-token, bitcoin-gold, celo-dollar, fan-token, lina, waykichain, hive, mithril, wazirx, xinfin-network, nebulas, aavegotchi, math-token, harmony, singularitynet, small-love-potion, perlin, omni, btse-token, maidsafecoin, kleros, x-cash, grin, ravencoin, uquid-coin, nxt, zap, elrond-gold, byteball-bytes, chia, adex, aventus, dmarket, hypercash, opium, digixdao, tokenomy, chromia, latoken, district0x, allianceblock, keeperdao, gameswap',
               order: 'market_cap_desc',
               per_page: 100,
               page: 1,

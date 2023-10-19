@@ -29,7 +29,7 @@
           role="img" aria-label="Placeholder: 500x500" 
           preserveAspectRatio="xMidYMid slice" 
           focusable="false">
-          <img v-else src="../../assets/news.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
+          <img v-else :src="img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" 
           height="500" 
       
           role="img" aria-label="Placeholder: 500x500" 
@@ -82,7 +82,8 @@
         articles: [],       
         currentPage: 1,    
         totalPages: 1,     
-        rows: 1,          
+        rows: 1,  
+        img:'https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1697068800&semt=ais'                 
       };
     },
     computed: {
@@ -112,7 +113,7 @@
         
         try {
           const response = await fetch(
-            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+            ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Page=1&PageSize=${pageSize}`
            // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           );
           const data = await response.json();

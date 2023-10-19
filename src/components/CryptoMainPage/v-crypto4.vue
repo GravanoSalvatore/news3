@@ -72,7 +72,7 @@ export default {
           
           try {
             const response = await fetch(
-              'https://min-api.cryptocompare.com/data/v2/news/?categories=ADA,XRP,XLM,MATIC,SOL,TRX,SHIBA,DOGE,EOS,LTC,USDT,&excludeCategories=Sponsored'
+              'https://min-api.cryptocompare.com/data/v2/news/?categories=ADA,XRP,XLM,TRX,SHIBA,DOGE,EOS,LTC,USDT,&excludeCategories=Sponsored'
             );
             const data = await response.json();
             return data.Data;

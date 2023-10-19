@@ -21,7 +21,7 @@
               <img v-else  
               width="320"
                height="180" 
-               src="../../assets/news.jpeg" 
+               :src="img" 
                class="bd-placeholder-img card-img-top" >
               
   
@@ -64,6 +64,7 @@ export default {
       currentPage: 1,
       totalPages: 1,
       rows: 20,
+      img:'https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1697068800&semt=ais'         
     };
   },
   computed: {
@@ -94,7 +95,7 @@ export default {
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Page=1&PageSize=${pageSize}`
           // `https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();
