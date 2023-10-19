@@ -1,5 +1,5 @@
 <template lang="">
-  <div id="intro2" class="bg-image shadow-2-strong">
+  <!-- <div id="intro2" class="bg-image shadow-2-strong">
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
         <div class="container d-flex align-items-center justify-content-center text-center h-100">
           <div class="text-white ">
@@ -7,7 +7,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   <main class="container main">
     <!-- <img class="bd-placeholder-img card-img-top" width="100%" height="500" :src="satoshi" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
    
@@ -79,9 +79,9 @@
                 height="320"
                class="bd-placeholder-img card-img-top"
                />
-               <a href="#!">
+               <!-- <a href="#!">
                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-               </a>
+               </a> -->
              </div>
              <div class="card-body">
                <h6 class="card-title"><strong>{{item.title}}</strong></h6>

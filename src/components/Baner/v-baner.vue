@@ -1,7 +1,7 @@
 <template lang="">
     <div>
         <div id="intro7" class="bg-image shadow-2-strong">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="container d-flex align-items-center justify-content-center text-center h-100">
           <div class="text-white">
             <!-- <h1 class="mb-1">Global News Hub</h1>
@@ -33,21 +33,51 @@ export default {
     methods: {
       businessChangeBaner(){
         let changeBusiness = document.getElementById("intro7").style.backgroundImage='url(https://www.gawieleroux.co.za/sites/default/files/2023-03/Blog%20photos_5%20enterprises.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
       },
       techChangeBaner(){
         let changeTech = document.getElementById("intro7").style.backgroundImage='url(https://standards.ieee.org/wp-content/uploads/2021/12/Connected-technologies-1920x1080-1.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
       },
       sportChangeBaner(){
         let changeSport = document.getElementById("intro7").style.backgroundImage='url(https://www.iro-dogs.com/wp-content/uploads/2021/09/Sports-Vouchers-Program.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
       },
       healthChangeBaner(){
         let changeHealth = document.getElementById("intro7").style.backgroundImage='url(https://s7d1.scene7.com/is/image/wbcollab/Health_Background_Nov21)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
       },
       enterChangeBaner(){
         let changeEnter = document.getElementById("intro7").style.backgroundImage='url(https://eu-assets.simpleview-europe.com/bournemouth/imageresizer/?image=%2Fdbimgs%2FBIC%20Performance.jpg&action=FeaturedItemsGalleryProElite3x2)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
       },
       scienceChangeBaner(){
         let changeScience = document.getElementById("intro7").style.backgroundImage='url(https://assets.weforum.org/community/image/3v8PB95CCSn86e5fowthRAybW4ajSY18z2FfVPi2spk.jpeg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
       },
 
 

@@ -14,7 +14,7 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
         <div class="d-flex  h-100">
           <div class="text-white container">
-            <router-link to="/CryptoPage" > <h1 class="mb-3 mt-4">TOP-100</h1></router-link>
+            <router-link to="/Crypto/CryptoPage" > <h1 class="mb-3 mt-4">TOP-100</h1></router-link>
             <h5 class="mb-4"></h5>
             
           </div>

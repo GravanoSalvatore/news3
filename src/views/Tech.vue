@@ -4,7 +4,7 @@
    <!-- <baner/> -->
    <br/>
     <tech2/>
-    <tech6/>
+   <tech6/> 
     <br/><br/>
    <carousel/>
    <br/><br/>

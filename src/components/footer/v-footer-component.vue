@@ -55,15 +55,15 @@
             <router-link to="/" class="text-reset">General</router-link>
           </p>
           <p>
-            <router-link to="/Business" class="text-reset">Business</router-link>
+            <router-link  @click="businessChangeBaner" to="/Business" class="text-reset">Business</router-link>
           
           </p>
           <p>
-            <router-link to="/Crypto" class="text-reset">Crypto</router-link>
+            <router-link @click="" to="/Crypto" class="text-reset">Crypto</router-link>
           
           </p>
           <p>
-            <router-link to="/Tech" class="text-reset">Technology</router-link>
+            <router-link @click="techChangeBaner" to="/Tech" class="text-reset">Technology</router-link>
           
           </p>
         </div>
@@ -74,19 +74,19 @@
             <!-- Useful links -->
           </h6>
           <p>
-            <router-link to="/Sport" class="text-reset">Sport</router-link>
+            <router-link @click="sportChangeBaner" to="/Sport" class="text-reset">Sport</router-link>
           
           </p>
           <p>
-            <router-link to="/Science" class="text-reset">Science</router-link>
+            <router-link @click="scienceChangeBaner" to="/Science" class="text-reset">Science</router-link>
           
           </p>
           <p>
-            <router-link to="/Health" class="text-reset">Health</router-link>
+            <router-link @click="healthChangeBaner" to="/Health" class="text-reset">Health</router-link>
           
           </p>
           <p>
-            <router-link to="/Entertainment" class="text-reset">Entertainment</router-link>
+            <router-link @click="enterChangeBaner" to="/Entertainment" class="text-reset">Entertainment</router-link>
           
           </p>
         </div>
@@ -122,7 +122,60 @@
 </template>
 <script>
 export default {
-  
+  methods: {
+    
+      businessChangeBaner(){
+        let changeBusiness = document.getElementById("intro7").style.backgroundImage='url(https://www.gawieleroux.co.za/sites/default/files/2023-03/Blog%20photos_5%20enterprises.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      techChangeBaner(){
+        let changeTech = document.getElementById("intro7").style.backgroundImage='url(https://standards.ieee.org/wp-content/uploads/2021/12/Connected-technologies-1920x1080-1.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      sportChangeBaner(){
+        let changeSport = document.getElementById("intro7").style.backgroundImage='url(https://www.iro-dogs.com/wp-content/uploads/2021/09/Sports-Vouchers-Program.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      healthChangeBaner(){
+        let changeHealth = document.getElementById("intro7").style.backgroundImage='url(https://s7d1.scene7.com/is/image/wbcollab/Health_Background_Nov21)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      enterChangeBaner(){
+        let changeEnter = document.getElementById("intro7").style.backgroundImage='url(https://eu-assets.simpleview-europe.com/bournemouth/imageresizer/?image=%2Fdbimgs%2FBIC%20Performance.jpg&action=FeaturedItemsGalleryProElite3x2)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      scienceChangeBaner(){
+        let changeScience = document.getElementById("intro7").style.backgroundImage='url(https://assets.weforum.org/community/image/3v8PB95CCSn86e5fowthRAybW4ajSY18z2FfVPi2spk.jpeg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+
+
+    
+  },
 }
 </script>
 <style lang="css" scoped>

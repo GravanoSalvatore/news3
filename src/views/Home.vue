@@ -2,62 +2,20 @@
 
  
   <baner/>
-     
+     <general/>
    <router-view></router-view>
    </template>
     <script>
 
-// import carousel from "../components/Carousel/v-carousel.vue";
-// import carousel2 from "../components/Carousel/v-carousel-2.vue";
+
 import baner from "../components/Baner/v-baner.vue";
-// import ico from "./Ico.vue";
-// import stocks from "./Stocks.vue";
-// import test from "../components/BootstrapMainPage/v-test.vue";
-// import boots1 from "../components/BootstrapMainPage/v-boots-1.vue";
-// import boots2 from "../components/BootstrapMainPage/v-boots-2.vue";
-// import boots3 from "../components/BootstrapMainPage/v-boots-3.vue";
-// import boots4 from "../components/BootstrapMainPage/v-boots-4.vue";
-// import boots5 from "../components/BootstrapMainPage/v-boots-5.vue";
-// import boots6 from "../components/BootstrapMainPage/v-boots-6.vue";
-// import boots7 from "../components/BootstrapMainPage/v-boots-7.vue";
-// import boots8 from "../components/BootstrapMainPage/v-boots-8.vue";
-// import boots10 from "../components/BootstrapMainPage/v-boots-10.vue";
-// import boots11 from "../components/BootstrapMainPage/v-boots-11.vue";
-// import boots12 from "../components/BootstrapMainPage/v-boots-12.vue";
-// import boots14 from "../components/BootstrapMainPage/v-boots-14.vue";
-// import boots15 from "../components/BootstrapMainPage/v-boots-15.vue";
-// import vNav6 from '../pages/nav-6.vue'
-// import vNav5 from '../pages/nav-5.vue'
-// import vNav4 from '../pages/nav-4.vue'
-// import vNav3 from '../pages/nav-3.vue'
-// import vNavNav from '../pages/nav-nav.vue'
-//  import searchGrid from '@/views/Select-3-grid.vue'
-// import search2 from '@/views/Select-3.vue'
+
+import general from '@/views/General.vue'
 export default {
   components: {
-    // carousel2,
-    // carousel,
+    
     baner,
-    // ico,
-    // stocks,
-    // test,
-    // boots1,
-    //  searchGrid,
-    // search2,
-    // boots4,
-    // boots3,
-    // boots5,
-    // boots6,
-    // boots7,
-    // boots8,
-    // boots10,
-    // boots11,
-    // boots12,
-    // boots14,
-    // boots15,
-    // vNav4,
-    // boots2,
-    // vNav6
+    general
   },
   data() {
     return {

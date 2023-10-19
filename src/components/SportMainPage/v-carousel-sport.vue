@@ -1,10 +1,10 @@
 <template lang="">
-    <div id="introCarousel-2" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+    <div id="introCarousel-233" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
   
   <ol class="carousel-indicators">
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="0" class="active"></li>
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="1"></li>
-    <li data-mdb-target="#introCarousel-2" data-mdb-slide-to="2"></li>
+    <li data-mdb-target="#introCarousel-233" data-mdb-slide-to="0" class="active"></li>
+    <li data-mdb-target="#introCarousel-233" data-mdb-slide-to="1"></li>
+    <li data-mdb-target="#introCarousel-233" data-mdb-slide-to="2"></li>
   </ol>
 
  
@@ -85,7 +85,7 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-#introCarousel-2,
+#introCarousel-233,
     .carousel-inner,
     .carousel-item,
     .carousel-item.active {
@@ -113,10 +113,10 @@ export default {
 
  
     @media (min-width: 992px) {
-      #introCarousel-2 {
+      #introCarousel-233 {
         margin-top: -58.59px;
       }
-      #introCarousel-2,
+      #introCarousel-233,
       .carousel-inner,
       .carousel-item,
       .carousel-item.active {

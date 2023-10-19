@@ -64,7 +64,7 @@ export default {
       currentPage: 1,
       totalPages: 1,
       rows: 20,
-      img:'https://www.conchovalleyhomepage.com/wp-content/uploads/sites/83/2015/04/healthnews_1429720857397_104687_ver1.0.png?strip=1&w=640'        
+      img:'https://dovidka.biz.ua/wp-content/uploads/2015/12/tsikavi-fakty-pro-sport.jpg'        
     };
   },
   computed: {

@@ -115,7 +115,7 @@ New York, NY 10012, US<br/>
   
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <img style="width:70px" :src="logo">
+      <router-link  @click="change" to="/"><img style="width:70px" :src="logo"></router-link>
     
     <vtime/>
       <div class="dropdown">
@@ -146,15 +146,15 @@ New York, NY 10012, US<br/>
 </button>
 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   <!-- <li><router-link to="/General" class="dropdown-item" href="#">General</router-link></li> -->
-  <li><router-link to="/Business" class="dropdown-item" href="#">Business</router-link></li>
+  <li><router-link  @click="businessChangeBaner" to="/Business" class="dropdown-item" href="#">Business</router-link></li>
  
-  <li><router-link to="/Tech" class="dropdown-item" href="#">Technology</router-link></li>
+  <li><router-link @click="techChangeBaner" to="/Tech" class="dropdown-item" href="#">Technology</router-link></li>
  
- <li><router-link to="/Sport" class="dropdown-item" href="#">Sport</router-link></li>
+ <li><router-link @click="sportChangeBaner" to="/Sport" class="dropdown-item" href="#">Sport</router-link></li>
  
- <li><router-link to="/Health" class="dropdown-item" href="#">Health</router-link></li>
- <li><router-link to="/Science" class="dropdown-item" href="#">Science</router-link></li>
- <li><router-link to="/Entertainment" class="dropdown-item" href="#">Entertainment</router-link></li>
+ <li><router-link @click="healthChangeBaner" to="/Health" class="dropdown-item" href="#">Health</router-link></li>
+ <li><router-link @click="scienceChangeBaner" to="/Science" class="dropdown-item" href="#">Science</router-link></li>
+ <li><router-link @click="enterChangeBaner" to="/Entertainment" class="dropdown-item" href="#">Entertainment</router-link></li>
  
 </ul>
 </div> 
@@ -359,8 +359,63 @@ export default {
   },
 
 methods: {
+  businessChangeBaner(){
+        let changeBusiness = document.getElementById("intro7").style.backgroundImage='url(https://www.gawieleroux.co.za/sites/default/files/2023-03/Blog%20photos_5%20enterprises.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      techChangeBaner(){
+        let changeTech = document.getElementById("intro7").style.backgroundImage='url(https://standards.ieee.org/wp-content/uploads/2021/12/Connected-technologies-1920x1080-1.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      sportChangeBaner(){
+        let changeSport = document.getElementById("intro7").style.backgroundImage='url(https://www.iro-dogs.com/wp-content/uploads/2021/09/Sports-Vouchers-Program.jpg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      healthChangeBaner(){
+        let changeHealth = document.getElementById("intro7").style.backgroundImage='url(https://s7d1.scene7.com/is/image/wbcollab/Health_Background_Nov21)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      enterChangeBaner(){
+        let changeEnter = document.getElementById("intro7").style.backgroundImage='url(https://eu-assets.simpleview-europe.com/bournemouth/imageresizer/?image=%2Fdbimgs%2FBIC%20Performance.jpg&action=FeaturedItemsGalleryProElite3x2)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+      scienceChangeBaner(){
+        let changeScience = document.getElementById("intro7").style.backgroundImage='url(https://assets.weforum.org/community/image/3v8PB95CCSn86e5fowthRAybW4ajSY18z2FfVPi2spk.jpeg)'
+        let closeGeneral = document.getElementById('general').style.display="none"
+        let closeGeneral2 = document.getElementById('general2').style.display="none"
+        let closeGeneral3 = document.getElementById('general3').style.display="none"
+        let introCarouselClose2 = document.getElementById('introCarousel-2').style.display="none"
+        let introCarouselClose = document.getElementById('introCarousel').style.display="none"
+      },
+
+
   change(){
   let change = document.getElementById("intro7").style.backgroundImage='url(https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg)'
+  let openGeneral = document.getElementById('general').style.display="block"
+        let openGeneral2 = document.getElementById('general2').style.display="block"
+        let openGeneral3 = document.getElementById('general3').style.display="block"
+        let openCarouselClose2 = document.getElementById('introCarousel-2').style.display="block"
+        let openCarouselClose = document.getElementById('introCarousel').style.display="block"
   },
 
 //   onSearchType: function(){

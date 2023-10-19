@@ -1,17 +1,17 @@
 <template lang="">
-    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+    <div id="introCarousel77" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
   
   <ol class="carousel-indicators">
-    <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
-    <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
-    <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+    <li data-mdb-target="#introCarousel77" data-mdb-slide-to="0" class="active"></li>
+    <li data-mdb-target="#introCarousel77" data-mdb-slide-to="1"></li>
+    <li data-mdb-target="#introCarousel77" data-mdb-slide-to="2"></li>
   </ol>
 
  
   <div class="carousel-inner">
   
     <div class="carousel-item active">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
             <router-link to="/Tech" > <h1 class="mb-3">Jorney</h1></router-link>
@@ -38,7 +38,7 @@
 
    
     <div class="carousel-item">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+      <div class="mask" style="">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white text-center">
             <router-link to="/Tech" > <h1 class="mb-3">Concerts and festivals</h1></router-link>
@@ -53,11 +53,7 @@
       <div
         class="mask"
         style="
-          background: linear-gradient(
-            45deg,
-            rgba(29, 236, 197, 0.7),
-            rgba(91, 14, 214, 0.7) 100%
-          );
+          
         "
       >
         <div class="d-flex justify-content-center align-items-center h-100">
@@ -85,7 +81,7 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-#introCarousel,
+#introCarousel77,
     .carousel-inner,
     .carousel-item,
     .carousel-item.active {
@@ -113,10 +109,10 @@ export default {
 
  
     @media (min-width: 992px) {
-      #introCarousel {
+      #introCarousel77 {
         margin-top: -58.59px;
       }
-      #introCarousel,
+      #introCarousel77,
       .carousel-inner,
       .carousel-item,
       .carousel-item.active {

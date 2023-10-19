@@ -2,7 +2,7 @@
 <template lang="">
   <div>
       <div id="intro2" class="bg-image shadow-2-strong">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
       <div class="container d-flex align-items-center justify-content-center text-center h-100">
         <div class="text-white ">
           <h1 class="mb-3 text-secondary"><strong>Global News Hub</strong></h1>
