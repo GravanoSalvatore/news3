@@ -1,44 +1,46 @@
 <template lang="">
-  
-  
-  <!-- <baner/> -->
+  <div class="mt-16">
+    
+      <health3/>
+      <health/>
+      <health4/>
+      <health6/>
+     
     <health2/>
-   <health6/>
-   <br/><br/>
-   <carousel/>
-   <br/><br/>
-   <health/>
-   <br/><br/>
-   <carousel2/>
-   <br/><br/>
+    <health5/>
   
- 
-  <health3/>
+  
+  
+  </div>
+  
+     </template> 
+      <script>
+  import health from '../components/HealthMainPage/v-health.vue'
+  import health2 from '../components/HealthMainPage/v-health-2.vue'
+  import health3 from '../components/HealthMainPage/v-health-3.vue'
+  import health4 from '../components/HealthMainPage/v-health-4.vue'
+  import health5 from '../components/HealthMainPage/v-health-5.vue'
+  import health6 from '../components/HealthMainPage/v-health-6.vue'
+  export default {
+    components: {
+      health,
+      health2,
+      health3,
+      health4,
+      health5,
+      health6
+      
+    },
+    data() {
+      return {
+       
+        
+      };
+    },
    
-</template>
-<script>
-import baner from '../components/HealthMainPage/v-baner-health.vue'
-import carousel from '../components/HealthMainPage/v-carousel-health.vue'
-import carousel2 from '../components/HealthMainPage/v-carousel-health-2.vue'
-import health6 from '../components/HealthMainPage/v-health-6.vue'
-import health from '../components/HealthMainPage/v-health.vue'
-import health2 from '../components/HealthMainPage/v-health-2.vue'
-import health3 from '../components/HealthMainPage/v-health-3.vue'
-import health4 from '../components/HealthMainPage/v-health-6.vue'
-export default {
-  components:{
-   health,
-   health2,
-   health3,
-   health4,
-   carousel,
-   carousel2,
-   baner,
-    health6
-  }
+  };
+  </script>
+      <style lang="scss" scoped>
+      
   
-}
-</script>
-<style lang="">
-  
-</style>
+  </style>

@@ -3,6 +3,7 @@
  *
  * Bootstraps Vuetify and other plugins then mounts the App`
  */
+import 'mdb-vue-ui-kit/css/mdb.min.css';
 import Translator from './i18n';
 
 new Translator;

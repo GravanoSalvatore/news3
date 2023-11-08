@@ -1,195 +1,194 @@
 <template lang="">
   <div>
-     
+   
   
-  
-    <div class="album py-5 bg-light">
-      <div class="container">
-  
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-          <div class="col" 
-          v-for="item in paginatedArticles"
-          :key="item"
-          >
-            <div class="card shadow-sm" >
-              <img v-if="item.urlToImage" class="bd-placeholder-img card-img-top" 
-              
-              :src='item.urlToImage'
-              width="320"
-               height="180" >
-               
-              <img v-else  
-              width="320"
-               height="180" 
-               :src="img" 
-               class="bd-placeholder-img card-img-top" >
-              
-  
-              <div class="card-body">
-                <p class="card-text"><a :href="item.url" target="_blank">{{item.title}}</a></p>
-               
-                <div class="">
-                  <u class="text-success"> {{item.source.name}}</u><br/>
-                    <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{ formatDateTime(item.publishedAt) }}</u>
-                 
-                </div>
-              </div>
-            </div>
+ 
+      <div class="big-add-area">
+          <div class="container-fluid">
+              <a href="#"><img src="/src/img/bg-img/add4.png" alt=""></a>
           </div>
-          
-        </div>
       </div>
-    </div>
+      
   
+     
+      <div class="news-area section-padding-100-70">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 col-md-8 col-lg-9"  
+                  
+                  v-for="(item,index) in articles5.slice(47)"
+                  :key="index"
+                  
+                  >
   
+                     
+                      <div class="single-blog-post d-flex flex-wrap style-5 mb-30">
+                         
+                          <div class="blog-thumbnail">
+                            <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                        <img v-else src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpR8e8gMDjDfsHIpq_6bnRx2T4AoWtK_wYYA&usqp=CAU" alt="">
+                                    </a>
+                          </div>
   
+                        
+                          <div class="blog-content">
+                            <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span>
+                              <a :href="item.url" class="post-title fw-bold" target="_blank">{{item.title}}</a>
+                              <a v-if="item.author" href="#" class="post-author">author:{{item.author}}</a>
+                                                 <a v-else href="#" class="post-author">author:Mr X</a>
+                              <p  class="fw-bold">{{item.content}}</p>
+                          </div>
+                      </div>
   
-    <div class="pagination mt-3">
-              <span class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</span>
-              <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
-              <span class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</span>
-            </div>
- 
- 
- 
-            <br/><br/>
+                      
+  
+                     
+  
+                  </div>
+  
+                  <div class="col-12 col-md-4 col-lg-3"
+                   
+                  v-for="(item,index) in articles6.slice(48)"
+                  :key="index"
+                  >
+  
+                                     
+  
+                      <!-- Single News Area -->
+                      <div class="single-blog-post style-6 mb-30">
+                          <!-- Blog Thumbnail -->
+                          <div class="blog-thumbnail">
+                            <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                        <img v-else src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpR8e8gMDjDfsHIpq_6bnRx2T4AoWtK_wYYA&usqp=CAU" alt="">
+                                    </a>
+                              <!-- <a href="#" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a> -->
+                          </div>
+  
+                          <!-- Blog Content -->
+                          <div class="blog-content">
+                            <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span>
+                              <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                              <a v-if="item.author" href="#" class="post-author">author:{{item.author}}</a>
+                                                 <a v-else href="#" class="post-author">author:Mr X</a>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ##### News Area End ##### -->
+  
+      
+  
   </div>
-</template>
-<script>
-export default {
-  data() {
-    return {
-      articles: [],
-      currentPage: 1,
-      totalPages: 1,
-      rows: 20,
-      img:'https://www.shaikhandcoaccountants.com/wp-content/uploads/2021/11/business-news-2-shaikh.jpg'         
-    };
-  },
-  computed: {
-    paginatedArticles() {
-
-      const start = (this.currentPage - 1) * this.rows;
-      const end = start + this.rows;
-      return this.articles.slice(start, end);
+  
+     </template> 
+      <script>
+  
+  
+  export default {
+    components: {
+     
+      
     },
-  },
-  methods: {
-    formatDateTime(dateTime) {
-    const options = {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    }
-    return new Date(dateTime).toLocaleString(undefined, options); 
-  },
-    async getData() {
-
-      // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-      // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
-      const pageSize = 100;
-
-      try {
-        const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Page=1&PageSize=${pageSize}`
-          // `https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
-        );
-        const data = await response.json();
-        return data.items;
-      } catch (error) {
-        console.error('Error fetching news:', error);
-        return [];
-      }
+    data() {
+      return {
+        
+        articles5: [],
+        articles6: [],
+        
+        rows:2,
+        
+      };
     },
-    async fetchNews() {
-
-      const articles = await this.getData();
-      this.articles = articles;
-      this.totalPages = Math.ceil(articles.length / this.rows);
+    computed: {
+      
     },
-    nextPage() {
-
-      if (this.currentPage < this.totalPages) {
-        this.currentPage++;
-      }
-    },
-    prevPage() {
-
-      if (this.currentPage > 1) {
-        this.currentPage--;
-      }
-    },
-  },
-  mounted() {
-
-    this.fetchNews();
-  },
-}
-</script>
-<style lang="scss" scoped>
-.card-body{
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 90px;
-}
-u{
-  text-decoration: none;
-}
-.pagination {
-  margin-left: 80px;
-
-  @media screen and (max-width: 280px) {
-    margin-left: 30px;
-  }
-}
-
-
-
-a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-.page-numbers {
-  margin-top: 10px;
-  font-size: 10px;
-}
-.next-bt,
-.prev-bt {
-  font-size: 10px;
-  margin: 7px;
- 
-  padding: 3px;
-  font-weight: bold;
-
-}
-
-.next-bt:hover {
-
-  color: rgb(1, 101, 31);
-}
-
-.prev-bt:hover {
-  color: red;
-
-}
-
-.card {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.album {
-  background-color: transparent !important;
-}
-</style>
+    methods: {
+          formatDateTime(dateTime) {
+          const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+          }
+          return new Date(dateTime).toLocaleString(undefined, options); },
+          
+        
+    
+         async getData5() {
+            
+           
+            const pageSize = 48;
+      
+            try {
+              const response = await fetch(
+                `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Language=14&Page=1&PageSize=${pageSize}`
+              );
+              const data = await response.json();
+              return data.items;
+            } catch (error) {
+              console.error("Error fetching news:", error);
+              return [];
+            }
+          },
+      
+          async fetchNews5() {
+            const articles = await this.getData5();
+            this.articles5 = articles;
+            this.totalPages = Math.ceil(articles.length / this.rows);
+          },
+          
+          async getData6() {
+            
+           
+            const pageSize = 49;
+      
+            try {
+              const response = await fetch(
+                `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Language=14&Page=1&PageSize=${pageSize}`
+              );
+              const data = await response.json();
+              return data.items;
+            } catch (error) {
+              console.error("Error fetching news:", error);
+              return [];
+            }
+          },
+          async fetchNews6() {
+            const articles = await this.getData6();
+            this.articles6 = articles;
+            this.totalPages = Math.ceil(articles.length / this.rows);
+          },
+    
+        },
+         
+        mounted() {
+         
+          this.fetchNews5();
+          this.fetchNews6();
+          
+         
+      
+      
+        },
+  };
+  </script>
+      <style lang="scss" scoped>
+  
+  </style>

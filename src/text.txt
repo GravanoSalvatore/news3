@@ -1,0 +1,597 @@
+  <!-- <div class="col-12 col-sm-6"
+                                    
+                                    v-for="item in articles"
+                                    :key="item"
+                                    >kkkkk
+                                        <div class="single-blog-post style-2 mb-5">
+                                          
+
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black" class="post-author">
+                              
+                              
+                              
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>
+                              
+                              
+                              
+                              
+                              
+                              :{{item.author}}</a>
+                                                <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                  
+                                  
+                                   
+
+                                   
+                                   
+                                   
+                                   
+                                    -->
+                                   
+                                   
+                                    
+                                    <!-- <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                           
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                            
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                                <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                            
+                              <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>:{{item.author}}</a>
+                                                 <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                                 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+ -->
+                                   <!-- <div class="tab-panel fade" id="nav-2" role="tabpanel" aria-labelledby="nav2">
+                                <div class="row">
+                                   
+                                    <div class="col-12 col-sm-6"
+                                    v-for="item in articles2"
+                                    :key="item"
+                                    >
+                                        <div class="single-blog-post style-2 mb-5">
+                                            
+
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                                <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                            
+                              <a v-if="item.author" href="#" style="color:black" class="post-author"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>:{{item.author}}</a>
+                                                 <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                  
+                                  
+                                   
+                                    <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin2"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                           
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+                            <!-- <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav3">
+                                <div class="row">
+                                  
+                                    <div class="col-12 col-sm-6"
+                                    v-for="item in articles3"
+                                    :key="item"
+                                    >
+                                        <div class="single-blog-post style-2 mb-5">
+                                           
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black" class="post-author"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                  
+                                  
+                                  
+                                  <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin3"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author">author:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+                            </div>
+
+
+
+
+ -->
+
+
+
+
+
+
+                            <!-- <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav4">
+                                <div class="row">
+                                    
+                                    <div class="col-12 col-sm-6"
+                                    v-for="item in articles4"
+                                    :key="item"
+                                    >
+                                        <div class="single-blog-post style-2 mb-5">
+                                           
+
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black" class="post-author">author:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                  
+                                  
+                                  <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin4"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                          
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                            
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                                <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                            
+                              <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author">author:{{item.author}}</a>
+                                                 <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+                            </div>
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- <div class="tab-pane fade" id="nav-5" role="tabpanel" aria-labelledby="nav5">
+                                <div class="row">
+                                   
+                                    <div class="col-12 col-sm-6"
+                                    v-for="item in articles5"
+                                    :key="item"
+                                    >
+                                        <div class="single-blog-post style-2 mb-5">
+                                           
+
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                                <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                            
+                              <a v-if="item.author" href="#" style="color:black" class="post-author">author:{{item.author}}</a>
+                                                 <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                  
+                                  
+                                 
+                                  <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin5"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                          
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author">author:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+                            </div>
+
+
+
+
+
+                            
+
+
+
+
+                             -->
+
+
+                            <!-- <div class="tab-pane fade" id="nav-6" role="tabpanel" aria-labelledby="nav7">
+                                <div class="row">
+                                  
+                                    <div class="col-12 col-sm-6"
+                                    v-for="item in articles6"
+                                    :key="item"
+                                    >
+                                        <div class="single-blog-post style-2 mb-5">
+                                           
+
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                                <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                            
+                              <a v-if="item.author" href="#" style="color:black" class="post-author">author:{{item.author}}</a>
+                                                 <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                         
+                                  
+                                  
+                                  <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin6"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                           
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author">author:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+ -->
+
+
+                            <!-- <div class="tab-pane fade" id="nav-7" role="tabpanel" aria-labelledby="nav7">
+                                <div class="row">
+                                   
+                                    <div class="col-12 col-sm-6"
+                                    v-for="item in articles7"
+                                    :key="item"
+                                    >
+                                        <div class="single-blog-post style-2 mb-5">
+                                           
+
+
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                            
+                                            <div class="blog-content">
+                                                <span class="post-date"></span>
+                                                <a :href="item.url" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                               <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+ <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+ <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                             
+                             <u> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                           
+                             <a v-if="item.author" href="#" style="color:black" class="post-author">author:{{item.author}}</a>
+                                                <a v-else href="#" style="color:black"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   -->
+                                  
+                                   <!-- <div class="col-12 col-sm-6"
+                                  v-for="item in articlesMin7"
+                                    >
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                           
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                    <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                </a>
+                                            </div>
+
+                                            
+                                            <div class="blog-content">
+                                              <a :href="item.url" style="font-size:12px" class="post-title fw-bold" target="_blank" >{{item.title}}</a>
+                                               
+                                                <span class="post-date"> <a href="#" class="post-author"><span class="post-date"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>  
+                              
+                              <u  style="color:black;font-size:11px"> {{ formatDateTime(item.publishedAt) }}</u></span> </a></span><br/>
+                            
+                              <a v-if="item.author" href="#" style="color:black;font-size:11px" class="post-author">author:{{item.author}}</a>
+                                                 <a v-else href="#" style="color:black;font-size:11px"  class="post-author">author:Mr X</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+                                                  </div>
+                                </div> -->
+                               
+                              
+                              
+                              

@@ -1,97 +1,135 @@
-<template>
-  <div class="container">
-    <div
-      id="carouselExampleAutoplaying"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div
-          v-for="(item, index) in images"
-          :key="index"
-          :class="{ 'carousel-item': true, active: index === 0 }"
-        >
-          <img v-if="item.urlToImage" :src="item.urlToImage" class="d-block w-100" alt="Image">
-          <img v-else  src="../../assets/news.jpeg" class="d-block w-100" alt="Image">
-     <p> <a :href="item.url" target="_blank">{{ item.title }}</a></p>
-      </div>
-     
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</template>
-
-<script>
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      images: [],
-    };
-  },
-  methods: {
-    async fetchData() {
-     // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
-      const pageSize = 100; 
-
-      try {
-        const response = await axios.get(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
-         // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
-        );
-
-        
-        this.images = response.data.items.map((article) => ({
-          urlToImage: article.urlToImage,title:article.title,url:article.url,
-        }));
-      } catch (error) {
-        console.error('Error fetching images:', error);
-      }
+<template lang="">
+  <div></div>
+   
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- /src/img/bg-img/10.jpg -->
+  
+ 
+      <!-- ##### Video Area Start ##### -->
+      <section class="video-area bg-img bg-overlay bg-fixed" style="background-image: url(' https://sport.ec.europa.eu/sites/default/files/styles/eac_ratio_16_9_xl/public/sport-active-part-erasmus-plus-crop.jpg?h=5dabf909&itok=JM-JNmjy');">
+          <div class="container">
+              <div class="row">
+                  <!-- Featured Video Area -->
+                 <div class="col-12">
+                      <div class="featured-video-area d-flex align-items-center justify-content-center">
+                          <div class="video-content text-center">
+                              <!-- <a href="#" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a> -->
+                              <!-- <span class="published-date">June 20, 2018</span>
+                              <h3 class="video-title">Traffic Problems in Time Square</h3> -->
+                          </div>
+                      </div>
+                  </div> 
+              </div>
+          </div>
+        </section>
+   </template> 
+      <script>
+  
+  
+  
+  export default {
+    components: {
+    
+      
     },
-  },
-  mounted() {
-    this.fetchData();
-  },
-};
-</script>
-
-<style scoped>
-a{
-  color:white;
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-}
-.d-block{
-  filter: brightness(50%);
-
-}
-p{
-  position: absolute;
-  color: white;
-  font-size: 30px;
-  top:0;
-  margin: 10px;
-  font-weight: bold;
-}
-</style>
+    data() {
+      return {
+        articles: [],
+        articles2: [],
+        articles3: [],
+        articles4: [],
+        articles5: [],
+        articles6: [],
+        articlesMin: [],
+        articlesMin2: [],
+        articlesMin3: [],
+        articlesMin4: [],
+        articlesMin5: [],
+        articlesMin6: [],
+        // currentPage: 1,
+        // totalPages: 1,
+        rows: 2,
+      };
+    },
+    computed: {
+      
+    },
+    methods: {
+      formatDateTime(dateTime) {
+      const options = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      }
+      return new Date(dateTime).toLocaleString(undefined, options); },
+      
+      
+      
+      async getData() {
+        
+        const apiKey = "1fb27fc9978d48ecadb4bdc77705325e";
+        const pageSize = 9;
+  
+        try {
+          const response = await fetch(
+            `https://newsapi.org/v2/top-headlines?category=general&language=en&Page=2&apiKey=${apiKey}&pageSize=${pageSize}`
+          );
+          const data = await response.json();
+          return data.articles;
+        } catch (error) {
+          console.error("Error fetching news:", error);
+          return [];
+        }
+      },
+      async fetchNews() {
+        const articles = await this.getData();
+        this.articles = articles;
+        this.totalPages = Math.ceil(articles.length / this.rows);
+      },
+  
+  
+  
+  
+  
+  
+  
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+    },
+    mounted() {
+      this.fetchNews();
+     
+  
+  
+    },
+  };
+  </script>
+      <style lang="scss" scoped>
+  
+  </style>

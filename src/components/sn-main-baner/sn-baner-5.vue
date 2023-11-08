@@ -1,0 +1,280 @@
+<template lang="">
+    <div>
+     
+    
+    
+    
+   
+       
+    
+       
+    
+    
+      
+        
+    
+    
+     <section class="post-news-area section-padding-10-0 mb-70">
+            <div class="container">
+                <div class="row justify-content-center">
+                    
+                    <div class="col-12 col-lg-8"
+                    v-for="(item,index) in articles.slice(2)"
+                        :key="index"
+                    
+                    >
+                   
+                    
+                    
+                   
+                    
+                     <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                          <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                      </a>
+                                     <p class="fw-bold " style=""> <h5><a style="color:black;font-size:20px" :href="item.url" target="_blank">{{item.title}}</a></h5></p>
+                                     <p  class="fw-bold" style="color:black;font-size:17px">{{item.description}}</p>
+                                     <span  class="fw-bold" style="color:black">{{item.content}}</span><br/>
+                                     <a v-if="item.author" href="#" class="post-author"  style="color:black">author:{{item.author}}</a>
+                                                     <a v-else href="#" class="post-author " style="color:black">author:Mr X</a>
+                                     
+                                 
+                                     <p>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+      <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+      <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>  {{ formatDateTime(item.publishedAt) }}</p>
+                        <!-- <div class="post-details-content mb-100"
+                       >
+                         
+                        </div> -->
+     
+                       
+    
+                    
+                    </div>
+    
+                   
+                    <div class="col-12 col-sm-9 col-md-6 col-lg-4"
+                    
+                    
+                    v-for="(item,index) in articles2.slice(3)"
+                        :key="index">
+                        <div class="sidebar-area">
+    
+                           
+                            <div class="single-widget-area newsletter-widget mb-10">
+                                <h5><a style="color:black" :href="item.url" target="_blank" class="fw-bold">{{item.title}}</a></h5>
+                                <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                          <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                      </a>
+                                <p class="mt-3 fw-bold">{{item.content}}.</p>
+                               
+                                <p ><span class="post-date"> 
+                                  
+                                  <a  v-if="item.author" href="#" class="post-author" style="color:black">author:{{item.author}}</a>
+                                                     <a  v-else href="#" class="post-author" style="color:black">author:Mr X</a><br/>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+      <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+      <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>  
+                                  
+                                  
+                                  <u> {{ formatDateTime(item.publishedAt) }}</u></span> </p>
+                            </div>
+    
+                           
+    
+    
+    
+    
+    
+    
+                            <div class="single-widget-area add-widget mb-30">
+                              
+                            </div>
+    
+                           
+                            <div class="single-widget-area news-widget mb-30"
+                            
+                            
+                            v-for="(item,index) in articles3.slice(4)"
+                        :key="index">
+                                
+    
+                               
+                                <div class="single-blog-post d-flex style-4 mb-30">
+                                   
+                                    <div class="blog-thumbnail">
+                                      <a href="#"><img v-if="item.urlToImage" :src="item.urlToImage" alt="">
+                                          <img v-else src="https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" alt="">
+                                      </a>
+                                    </div>
+    
+                                  
+                                    <div class="blog-content">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+      <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+      <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>  
+                                 
+                                        <span class="post-date"> {{ formatDateTime(item.publishedAt) }}</span>
+                                        <a   :href="item.url" target="_blank" class="post-title fw-bold">{{item.title}}</a>
+                                        <a v-if="item.author" style="color:black" href="#" class="post-author">author:{{item.author}}</a>
+                                                     <a v-else href="#" class="post-author">author:Mr X</a>
+                                    </div>
+                                </div>
+    
+                               
+                               
+    
+                               
+                               
+                               
+    
+                              
+                                
+                            </div>
+    
+                          
+                           
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+       
+    
+    
+        
+    
+    </div>
+    
+       </template> 
+        <script>
+    
+    
+    export default {
+      components: {
+       
+        
+      },
+      data() {
+        return {
+          articles: [],
+          articles2: [],
+          articles3: [],
+         
+          rows:2,
+          
+        };
+      },
+      computed: {
+        
+      },
+      methods: {
+            formatDateTime(dateTime) {
+            const options = {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+            }
+            return new Date(dateTime).toLocaleString(undefined, options); },
+            
+            
+            
+            async getData() {
+              
+             
+              const pageSize = 3;
+        
+              try {
+                const response = await fetch(
+                  `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Language=14&Page=1&PageSize=${pageSize}`
+                );
+                const data = await response.json();
+                return data.items;
+              } catch (error) {
+                console.error("Error fetching news:", error);
+                return [];
+              }
+            },
+            async fetchNews() {
+              const articles = await this.getData();
+              this.articles = articles;
+              this.totalPages = Math.ceil(articles.length / this.rows);
+            },
+
+
+
+
+
+
+            async getData2() {
+              
+             
+              const pageSize = 4;
+        
+              try {
+                const response = await fetch(
+                  `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Language=14&Page=1&PageSize=${pageSize}`
+                );
+                const data = await response.json();
+                return data.items;
+              } catch (error) {
+                console.error("Error fetching news:", error);
+                return [];
+              }
+            },
+              async fetchNews2() {
+              const articles = await this.getData2();
+              this.articles2 = articles;
+              this.totalPages = Math.ceil(articles.length / this.rows);
+            },
+    
+    
+        
+   async getData3() {
+              
+             
+              const pageSize = 5;
+        
+              try {
+                const response = await fetch(
+                  `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Language=14&Page=1&PageSize=${pageSize}`
+                );
+                const data = await response.json();
+                return data.items;
+              } catch (error) {
+                console.error("Error fetching news:", error);
+                return [];
+              }
+            },
+              async fetchNews3() {
+              const articles = await this.getData3();
+              this.articles3 = articles;
+              this.totalPages = Math.ceil(articles.length / this.rows);
+            },
+        
+        
+    },
+           
+          mounted() {
+            this.fetchNews();
+            this.fetchNews2();
+            this.fetchNews3();
+           
+           
+        
+        
+          },
+    };
+    </script>
+        <style lang="scss" scoped>
+    u{
+      text-decoration: none;
+    }
+    </style>
